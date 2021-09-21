@@ -1,3 +1,0 @@
-#!/bin/bash
-mkdir -p /Library/Themes
-chmod 775 /Library/Themes

@@ -1,8 +1,14 @@
 <repo>
 	<footerlinks>
 		<link>
-			<name>Support Me</name>
-			<url>https://youtube.com/c/dollazYT</url>
-			<iconclass>fa fa-superpowers</iconclass>
+			<name></name>
+			<url></url>
+			<iconclass></iconclass>
 		</link>
+		<link>
+			<name></name>
+			<url></url>
+			<iconclass></iconclass>
+		</link>
+	</footerlinks>
 </repo>

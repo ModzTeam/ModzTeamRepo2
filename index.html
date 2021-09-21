@@ -1,417 +1,626 @@
-<html><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=0">
-  <title>Modz Team Repo</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="web/index.css">
+<!doctype html>
+<html lang="en">
 
-  <style>
-    a,
-    .tint {
-      color: {
-          {
-          tint_color
-        }
-      }
-    }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-    .active {
-      color: {
-          {
-          tint_color
-        }
-      }
-  </style>
-  <script src="https://kit.fontawesome.com/dda4af39da.js" crossorigin="anonymous"></script><style media="all" id="fa-v4-font-face">/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg");unicode-range:U+f004-f005,U+f007,U+f017,U+f022,U+f024,U+f02e,U+f03e,U+f044,U+f057-f059,U+f06e,U+f070,U+f075,U+f07b-f07c,U+f080,U+f086,U+f089,U+f094,U+f09d,U+f0a0,U+f0a4-f0a7,U+f0c5,U+f0c7-f0c8,U+f0e0,U+f0eb,U+f0f3,U+f0f8,U+f0fe,U+f111,U+f118-f11a,U+f11c,U+f133,U+f144,U+f146,U+f14a,U+f14d-f14e,U+f150-f152,U+f15b-f15c,U+f164-f165,U+f185-f186,U+f191-f192,U+f1ad,U+f1c1-f1c9,U+f1cd,U+f1d8,U+f1e3,U+f1ea,U+f1f6,U+f1f9,U+f20a,U+f247-f249,U+f24d,U+f254-f25b,U+f25d,U+f271-f274,U+f279,U+f28b,U+f28d,U+f2b5-f2b6,U+f2b9,U+f2bb,U+f2bd,U+f2c1-f2c2,U+f2d0,U+f2d2,U+f2dc,U+f2ed,U+f3a5,U+f3d1,U+f410}@font-face{font-family:"FontAwesome";font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-v4deprecations.svg#fontawesome) format("svg");unicode-range:U+f003,U+f006,U+f014,U+f016,U+f01a-f01b,U+f01d,U+f040,U+f045-f047,U+f05c-f05d,U+f07d-f07e,U+f087-f088,U+f08a-f08b,U+f08e,U+f090,U+f096-f097,U+f0a2,U+f0e4-f0e6,U+f0ec-f0ee,U+f0f5-f0f7,U+f10c,U+f112,U+f114-f115,U+f11d,U+f123,U+f132,U+f145,U+f147-f149,U+f14c,U+f166,U+f16a,U+f172,U+f175-f178,U+f18e,U+f190,U+f196,U+f1b1,U+f1d9,U+f1db,U+f1f7,U+f20c,U+f219,U+f230,U+f24a,U+f250,U+f278,U+f27b,U+f283,U+f28c,U+f28e,U+f29b-f29c,U+f2b7,U+f2ba,U+f2bc,U+f2be,U+f2c0,U+f2c3,U+f2d3-f2d4}</style><style media="all" id="fa-v4-shims">/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */.fa.fa-glass:before{content:"\f000"}.fa.fa-meetup{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-star-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-star-o:before{content:"\f005"}.fa.fa-close:before,.fa.fa-remove:before{content:"\f00d"}.fa.fa-gear:before{content:"\f013"}.fa.fa-trash-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-trash-o:before{content:"\f2ed"}.fa.fa-file-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-o:before{content:"\f15b"}.fa.fa-clock-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-clock-o:before{content:"\f017"}.fa.fa-arrow-circle-o-down{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-arrow-circle-o-down:before{content:"\f358"}.fa.fa-arrow-circle-o-up{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-arrow-circle-o-up:before{content:"\f35b"}.fa.fa-play-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-play-circle-o:before{content:"\f144"}.fa.fa-repeat:before,.fa.fa-rotate-right:before{content:"\f01e"}.fa.fa-refresh:before{content:"\f021"}.fa.fa-list-alt{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-dedent:before{content:"\f03b"}.fa.fa-video-camera:before{content:"\f03d"}.fa.fa-picture-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-picture-o:before{content:"\f03e"}.fa.fa-photo{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-photo:before{content:"\f03e"}.fa.fa-image{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-image:before{content:"\f03e"}.fa.fa-pencil:before{content:"\f303"}.fa.fa-map-marker:before{content:"\f3c5"}.fa.fa-pencil-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-pencil-square-o:before{content:"\f044"}.fa.fa-share-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-share-square-o:before{content:"\f14d"}.fa.fa-check-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-check-square-o:before{content:"\f14a"}.fa.fa-arrows:before{content:"\f0b2"}.fa.fa-times-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-times-circle-o:before{content:"\f057"}.fa.fa-check-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-check-circle-o:before{content:"\f058"}.fa.fa-mail-forward:before{content:"\f064"}.fa.fa-expand:before{content:"\f424"}.fa.fa-compress:before{content:"\f422"}.fa.fa-eye,.fa.fa-eye-slash{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-warning:before{content:"\f071"}.fa.fa-calendar:before{content:"\f073"}.fa.fa-arrows-v:before{content:"\f338"}.fa.fa-arrows-h:before{content:"\f337"}.fa.fa-bar-chart{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-bar-chart:before{content:"\f080"}.fa.fa-bar-chart-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-bar-chart-o:before{content:"\f080"}.fa.fa-facebook-square,.fa.fa-twitter-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-gears:before{content:"\f085"}.fa.fa-thumbs-o-up{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-thumbs-o-up:before{content:"\f164"}.fa.fa-thumbs-o-down{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-thumbs-o-down:before{content:"\f165"}.fa.fa-heart-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-heart-o:before{content:"\f004"}.fa.fa-sign-out:before{content:"\f2f5"}.fa.fa-linkedin-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-linkedin-square:before{content:"\f08c"}.fa.fa-thumb-tack:before{content:"\f08d"}.fa.fa-external-link:before{content:"\f35d"}.fa.fa-sign-in:before{content:"\f2f6"}.fa.fa-github-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-lemon-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-lemon-o:before{content:"\f094"}.fa.fa-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-square-o:before{content:"\f0c8"}.fa.fa-bookmark-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-bookmark-o:before{content:"\f02e"}.fa.fa-facebook,.fa.fa-twitter{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-facebook:before{content:"\f39e"}.fa.fa-facebook-f{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-facebook-f:before{content:"\f39e"}.fa.fa-github{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-credit-card{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-feed:before{content:"\f09e"}.fa.fa-hdd-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hdd-o:before{content:"\f0a0"}.fa.fa-hand-o-right{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-o-right:before{content:"\f0a4"}.fa.fa-hand-o-left{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-o-left:before{content:"\f0a5"}.fa.fa-hand-o-up{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-o-up:before{content:"\f0a6"}.fa.fa-hand-o-down{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-o-down:before{content:"\f0a7"}.fa.fa-arrows-alt:before{content:"\f31e"}.fa.fa-group:before{content:"\f0c0"}.fa.fa-chain:before{content:"\f0c1"}.fa.fa-scissors:before{content:"\f0c4"}.fa.fa-files-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-files-o:before{content:"\f0c5"}.fa.fa-floppy-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-floppy-o:before{content:"\f0c7"}.fa.fa-navicon:before,.fa.fa-reorder:before{content:"\f0c9"}.fa.fa-google-plus,.fa.fa-google-plus-square,.fa.fa-pinterest,.fa.fa-pinterest-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-google-plus:before{content:"\f0d5"}.fa.fa-money{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-money:before{content:"\f3d1"}.fa.fa-unsorted:before{content:"\f0dc"}.fa.fa-sort-desc:before{content:"\f0dd"}.fa.fa-sort-asc:before{content:"\f0de"}.fa.fa-linkedin{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-linkedin:before{content:"\f0e1"}.fa.fa-rotate-left:before{content:"\f0e2"}.fa.fa-legal:before{content:"\f0e3"}.fa.fa-dashboard:before,.fa.fa-tachometer:before{content:"\f3fd"}.fa.fa-comment-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-comment-o:before{content:"\f075"}.fa.fa-comments-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-comments-o:before{content:"\f086"}.fa.fa-flash:before{content:"\f0e7"}.fa.fa-clipboard,.fa.fa-paste{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-paste:before{content:"\f328"}.fa.fa-lightbulb-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-lightbulb-o:before{content:"\f0eb"}.fa.fa-exchange:before{content:"\f362"}.fa.fa-cloud-download:before{content:"\f381"}.fa.fa-cloud-upload:before{content:"\f382"}.fa.fa-bell-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-bell-o:before{content:"\f0f3"}.fa.fa-cutlery:before{content:"\f2e7"}.fa.fa-file-text-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-text-o:before{content:"\f15c"}.fa.fa-building-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-building-o:before{content:"\f1ad"}.fa.fa-hospital-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hospital-o:before{content:"\f0f8"}.fa.fa-tablet:before{content:"\f3fa"}.fa.fa-mobile-phone:before,.fa.fa-mobile:before{content:"\f3cd"}.fa.fa-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-circle-o:before{content:"\f111"}.fa.fa-mail-reply:before{content:"\f3e5"}.fa.fa-github-alt{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-folder-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-folder-o:before{content:"\f07b"}.fa.fa-folder-open-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-folder-open-o:before{content:"\f07c"}.fa.fa-smile-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-smile-o:before{content:"\f118"}.fa.fa-frown-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-frown-o:before{content:"\f119"}.fa.fa-meh-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-meh-o:before{content:"\f11a"}.fa.fa-keyboard-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-keyboard-o:before{content:"\f11c"}.fa.fa-flag-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-flag-o:before{content:"\f024"}.fa.fa-mail-reply-all:before{content:"\f122"}.fa.fa-star-half-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-star-half-o:before{content:"\f089"}.fa.fa-star-half-empty{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-star-half-empty:before{content:"\f089"}.fa.fa-star-half-full{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-star-half-full:before{content:"\f089"}.fa.fa-code-fork:before{content:"\f126"}.fa.fa-chain-broken:before{content:"\f127"}.fa.fa-shield:before{content:"\f3ed"}.fa.fa-calendar-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-calendar-o:before{content:"\f133"}.fa.fa-css3,.fa.fa-html5,.fa.fa-maxcdn{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-ticket:before{content:"\f3ff"}.fa.fa-minus-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-minus-square-o:before{content:"\f146"}.fa.fa-level-up:before{content:"\f3bf"}.fa.fa-level-down:before{content:"\f3be"}.fa.fa-pencil-square:before{content:"\f14b"}.fa.fa-external-link-square:before{content:"\f360"}.fa.fa-compass{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-caret-square-o-down{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-caret-square-o-down:before{content:"\f150"}.fa.fa-toggle-down{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-toggle-down:before{content:"\f150"}.fa.fa-caret-square-o-up{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-caret-square-o-up:before{content:"\f151"}.fa.fa-toggle-up{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-toggle-up:before{content:"\f151"}.fa.fa-caret-square-o-right{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-caret-square-o-right:before{content:"\f152"}.fa.fa-toggle-right{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-toggle-right:before{content:"\f152"}.fa.fa-eur:before,.fa.fa-euro:before{content:"\f153"}.fa.fa-gbp:before{content:"\f154"}.fa.fa-dollar:before,.fa.fa-usd:before{content:"\f155"}.fa.fa-inr:before,.fa.fa-rupee:before{content:"\f156"}.fa.fa-cny:before,.fa.fa-jpy:before,.fa.fa-rmb:before,.fa.fa-yen:before{content:"\f157"}.fa.fa-rouble:before,.fa.fa-rub:before,.fa.fa-ruble:before{content:"\f158"}.fa.fa-krw:before,.fa.fa-won:before{content:"\f159"}.fa.fa-bitcoin,.fa.fa-btc{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-bitcoin:before{content:"\f15a"}.fa.fa-file-text:before{content:"\f15c"}.fa.fa-sort-alpha-asc:before{content:"\f15d"}.fa.fa-sort-alpha-desc:before{content:"\f881"}.fa.fa-sort-amount-asc:before{content:"\f160"}.fa.fa-sort-amount-desc:before{content:"\f884"}.fa.fa-sort-numeric-asc:before{content:"\f162"}.fa.fa-sort-numeric-desc:before{content:"\f886"}.fa.fa-xing,.fa.fa-xing-square,.fa.fa-youtube,.fa.fa-youtube-play,.fa.fa-youtube-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-youtube-play:before{content:"\f167"}.fa.fa-adn,.fa.fa-bitbucket,.fa.fa-bitbucket-square,.fa.fa-dropbox,.fa.fa-flickr,.fa.fa-instagram,.fa.fa-stack-overflow{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-bitbucket-square:before{content:"\f171"}.fa.fa-tumblr,.fa.fa-tumblr-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-long-arrow-down:before{content:"\f309"}.fa.fa-long-arrow-up:before{content:"\f30c"}.fa.fa-long-arrow-left:before{content:"\f30a"}.fa.fa-long-arrow-right:before{content:"\f30b"}.fa.fa-android,.fa.fa-apple,.fa.fa-dribbble,.fa.fa-foursquare,.fa.fa-gittip,.fa.fa-gratipay,.fa.fa-linux,.fa.fa-skype,.fa.fa-trello,.fa.fa-windows{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-gittip:before{content:"\f184"}.fa.fa-sun-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-sun-o:before{content:"\f185"}.fa.fa-moon-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-moon-o:before{content:"\f186"}.fa.fa-pagelines,.fa.fa-renren,.fa.fa-stack-exchange,.fa.fa-vk,.fa.fa-weibo{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-arrow-circle-o-right{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-arrow-circle-o-right:before{content:"\f35a"}.fa.fa-arrow-circle-o-left{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-arrow-circle-o-left:before{content:"\f359"}.fa.fa-caret-square-o-left{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-caret-square-o-left:before{content:"\f191"}.fa.fa-toggle-left{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-toggle-left:before{content:"\f191"}.fa.fa-dot-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-dot-circle-o:before{content:"\f192"}.fa.fa-vimeo-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-try:before,.fa.fa-turkish-lira:before{content:"\f195"}.fa.fa-plus-square-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-plus-square-o:before{content:"\f0fe"}.fa.fa-openid,.fa.fa-slack,.fa.fa-wordpress{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-bank:before,.fa.fa-institution:before{content:"\f19c"}.fa.fa-mortar-board:before{content:"\f19d"}.fa.fa-delicious,.fa.fa-digg,.fa.fa-drupal,.fa.fa-google,.fa.fa-joomla,.fa.fa-pied-piper-alt,.fa.fa-pied-piper-pp,.fa.fa-reddit,.fa.fa-reddit-square,.fa.fa-stumbleupon,.fa.fa-stumbleupon-circle,.fa.fa-yahoo{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-spoon:before{content:"\f2e5"}.fa.fa-behance,.fa.fa-behance-square,.fa.fa-steam,.fa.fa-steam-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-automobile:before{content:"\f1b9"}.fa.fa-envelope-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-envelope-o:before{content:"\f0e0"}.fa.fa-deviantart,.fa.fa-soundcloud,.fa.fa-spotify{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-file-pdf-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-pdf-o:before{content:"\f1c1"}.fa.fa-file-word-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-word-o:before{content:"\f1c2"}.fa.fa-file-excel-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-excel-o:before{content:"\f1c3"}.fa.fa-file-powerpoint-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-powerpoint-o:before{content:"\f1c4"}.fa.fa-file-image-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-image-o:before{content:"\f1c5"}.fa.fa-file-photo-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-photo-o:before{content:"\f1c5"}.fa.fa-file-picture-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-picture-o:before{content:"\f1c5"}.fa.fa-file-archive-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-archive-o:before{content:"\f1c6"}.fa.fa-file-zip-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-zip-o:before{content:"\f1c6"}.fa.fa-file-audio-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-audio-o:before{content:"\f1c7"}.fa.fa-file-sound-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-sound-o:before{content:"\f1c7"}.fa.fa-file-video-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-video-o:before{content:"\f1c8"}.fa.fa-file-movie-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-movie-o:before{content:"\f1c8"}.fa.fa-file-code-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-file-code-o:before{content:"\f1c9"}.fa.fa-codepen,.fa.fa-jsfiddle,.fa.fa-vine{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-life-bouy,.fa.fa-life-ring{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-life-bouy:before{content:"\f1cd"}.fa.fa-life-buoy{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-life-buoy:before{content:"\f1cd"}.fa.fa-life-saver{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-life-saver:before{content:"\f1cd"}.fa.fa-support{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-support:before{content:"\f1cd"}.fa.fa-circle-o-notch:before{content:"\f1ce"}.fa.fa-ra,.fa.fa-rebel{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-ra:before{content:"\f1d0"}.fa.fa-resistance{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-resistance:before{content:"\f1d0"}.fa.fa-empire,.fa.fa-ge{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-ge:before{content:"\f1d1"}.fa.fa-git,.fa.fa-git-square,.fa.fa-hacker-news,.fa.fa-y-combinator-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-y-combinator-square:before{content:"\f1d4"}.fa.fa-yc-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-yc-square:before{content:"\f1d4"}.fa.fa-qq,.fa.fa-tencent-weibo,.fa.fa-wechat,.fa.fa-weixin{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-wechat:before{content:"\f1d7"}.fa.fa-send:before{content:"\f1d8"}.fa.fa-paper-plane-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-paper-plane-o:before{content:"\f1d8"}.fa.fa-send-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-send-o:before{content:"\f1d8"}.fa.fa-circle-thin{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-circle-thin:before{content:"\f111"}.fa.fa-header:before{content:"\f1dc"}.fa.fa-sliders:before{content:"\f1de"}.fa.fa-futbol-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-futbol-o:before{content:"\f1e3"}.fa.fa-soccer-ball-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-soccer-ball-o:before{content:"\f1e3"}.fa.fa-slideshare,.fa.fa-twitch,.fa.fa-yelp{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-newspaper-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-newspaper-o:before{content:"\f1ea"}.fa.fa-cc-amex,.fa.fa-cc-discover,.fa.fa-cc-mastercard,.fa.fa-cc-paypal,.fa.fa-cc-stripe,.fa.fa-cc-visa,.fa.fa-google-wallet,.fa.fa-paypal{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-bell-slash-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-bell-slash-o:before{content:"\f1f6"}.fa.fa-trash:before{content:"\f2ed"}.fa.fa-copyright{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-eyedropper:before{content:"\f1fb"}.fa.fa-area-chart:before{content:"\f1fe"}.fa.fa-pie-chart:before{content:"\f200"}.fa.fa-line-chart:before{content:"\f201"}.fa.fa-angellist,.fa.fa-ioxhost,.fa.fa-lastfm,.fa.fa-lastfm-square{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-cc{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-cc:before{content:"\f20a"}.fa.fa-ils:before,.fa.fa-shekel:before,.fa.fa-sheqel:before{content:"\f20b"}.fa.fa-meanpath{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-meanpath:before{content:"\f2b4"}.fa.fa-buysellads,.fa.fa-connectdevelop,.fa.fa-dashcube,.fa.fa-forumbee,.fa.fa-leanpub,.fa.fa-sellsy,.fa.fa-shirtsinbulk,.fa.fa-simplybuilt,.fa.fa-skyatlas{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-diamond{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-diamond:before{content:"\f3a5"}.fa.fa-intersex:before{content:"\f224"}.fa.fa-facebook-official{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-facebook-official:before{content:"\f09a"}.fa.fa-pinterest-p,.fa.fa-whatsapp{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-hotel:before{content:"\f236"}.fa.fa-medium,.fa.fa-viacoin,.fa.fa-y-combinator,.fa.fa-yc{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-yc:before{content:"\f23b"}.fa.fa-expeditedssl,.fa.fa-opencart,.fa.fa-optin-monster{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-battery-4:before,.fa.fa-battery:before{content:"\f240"}.fa.fa-battery-3:before{content:"\f241"}.fa.fa-battery-2:before{content:"\f242"}.fa.fa-battery-1:before{content:"\f243"}.fa.fa-battery-0:before{content:"\f244"}.fa.fa-object-group,.fa.fa-object-ungroup,.fa.fa-sticky-note-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-sticky-note-o:before{content:"\f249"}.fa.fa-cc-diners-club,.fa.fa-cc-jcb{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-clone,.fa.fa-hourglass-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hourglass-o:before{content:"\f254"}.fa.fa-hourglass-1:before{content:"\f251"}.fa.fa-hourglass-2:before{content:"\f252"}.fa.fa-hourglass-3:before{content:"\f253"}.fa.fa-hand-rock-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-rock-o:before{content:"\f255"}.fa.fa-hand-grab-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-grab-o:before{content:"\f255"}.fa.fa-hand-paper-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-paper-o:before{content:"\f256"}.fa.fa-hand-stop-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-stop-o:before{content:"\f256"}.fa.fa-hand-scissors-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-scissors-o:before{content:"\f257"}.fa.fa-hand-lizard-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-lizard-o:before{content:"\f258"}.fa.fa-hand-spock-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-spock-o:before{content:"\f259"}.fa.fa-hand-pointer-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-pointer-o:before{content:"\f25a"}.fa.fa-hand-peace-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-hand-peace-o:before{content:"\f25b"}.fa.fa-registered{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-chrome,.fa.fa-creative-commons,.fa.fa-firefox,.fa.fa-get-pocket,.fa.fa-gg,.fa.fa-gg-circle,.fa.fa-internet-explorer,.fa.fa-odnoklassniki,.fa.fa-odnoklassniki-square,.fa.fa-opera,.fa.fa-safari,.fa.fa-tripadvisor,.fa.fa-wikipedia-w{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-television:before{content:"\f26c"}.fa.fa-500px,.fa.fa-amazon,.fa.fa-contao{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-calendar-plus-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-calendar-plus-o:before{content:"\f271"}.fa.fa-calendar-minus-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-calendar-minus-o:before{content:"\f272"}.fa.fa-calendar-times-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-calendar-times-o:before{content:"\f273"}.fa.fa-calendar-check-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-calendar-check-o:before{content:"\f274"}.fa.fa-map-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-map-o:before{content:"\f279"}.fa.fa-commenting:before{content:"\f4ad"}.fa.fa-commenting-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-commenting-o:before{content:"\f4ad"}.fa.fa-houzz,.fa.fa-vimeo{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-vimeo:before{content:"\f27d"}.fa.fa-black-tie,.fa.fa-edge,.fa.fa-fonticons,.fa.fa-reddit-alien{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-credit-card-alt:before{content:"\f09d"}.fa.fa-codiepie,.fa.fa-fort-awesome,.fa.fa-mixcloud,.fa.fa-modx,.fa.fa-product-hunt,.fa.fa-scribd,.fa.fa-usb{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-pause-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-pause-circle-o:before{content:"\f28b"}.fa.fa-stop-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-stop-circle-o:before{content:"\f28d"}.fa.fa-bluetooth,.fa.fa-bluetooth-b,.fa.fa-envira,.fa.fa-gitlab,.fa.fa-wheelchair-alt,.fa.fa-wpbeginner,.fa.fa-wpforms{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-wheelchair-alt:before{content:"\f368"}.fa.fa-question-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-question-circle-o:before{content:"\f059"}.fa.fa-volume-control-phone:before{content:"\f2a0"}.fa.fa-asl-interpreting:before{content:"\f2a3"}.fa.fa-deafness:before,.fa.fa-hard-of-hearing:before{content:"\f2a4"}.fa.fa-glide,.fa.fa-glide-g{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-signing:before{content:"\f2a7"}.fa.fa-first-order,.fa.fa-google-plus-official,.fa.fa-pied-piper,.fa.fa-snapchat,.fa.fa-snapchat-ghost,.fa.fa-snapchat-square,.fa.fa-themeisle,.fa.fa-viadeo,.fa.fa-viadeo-square,.fa.fa-yoast{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-google-plus-official:before{content:"\f2b3"}.fa.fa-google-plus-circle{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-google-plus-circle:before{content:"\f2b3"}.fa.fa-fa,.fa.fa-font-awesome{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-fa:before{content:"\f2b4"}.fa.fa-handshake-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-handshake-o:before{content:"\f2b5"}.fa.fa-envelope-open-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-envelope-open-o:before{content:"\f2b6"}.fa.fa-linode{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-address-book-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-address-book-o:before{content:"\f2b9"}.fa.fa-vcard:before{content:"\f2bb"}.fa.fa-address-card-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-address-card-o:before{content:"\f2bb"}.fa.fa-vcard-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-vcard-o:before{content:"\f2bb"}.fa.fa-user-circle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-user-circle-o:before{content:"\f2bd"}.fa.fa-user-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-user-o:before{content:"\f007"}.fa.fa-id-badge{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-drivers-license:before{content:"\f2c2"}.fa.fa-id-card-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-id-card-o:before{content:"\f2c2"}.fa.fa-drivers-license-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-drivers-license-o:before{content:"\f2c2"}.fa.fa-free-code-camp,.fa.fa-quora,.fa.fa-telegram{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-thermometer-4:before,.fa.fa-thermometer:before{content:"\f2c7"}.fa.fa-thermometer-3:before{content:"\f2c8"}.fa.fa-thermometer-2:before{content:"\f2c9"}.fa.fa-thermometer-1:before{content:"\f2ca"}.fa.fa-thermometer-0:before{content:"\f2cb"}.fa.fa-bathtub:before,.fa.fa-s15:before{content:"\f2cd"}.fa.fa-window-maximize,.fa.fa-window-restore{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-times-rectangle:before{content:"\f410"}.fa.fa-window-close-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-window-close-o:before{content:"\f410"}.fa.fa-times-rectangle-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-times-rectangle-o:before{content:"\f410"}.fa.fa-bandcamp,.fa.fa-eercast,.fa.fa-etsy,.fa.fa-grav,.fa.fa-imdb,.fa.fa-ravelry{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-eercast:before{content:"\f2da"}.fa.fa-snowflake-o{font-family:"Font Awesome 5 Free";font-weight:400}.fa.fa-snowflake-o:before{content:"\f2dc"}.fa.fa-superpowers,.fa.fa-wpexplorer{font-family:"Font Awesome 5 Brands";font-weight:400}.fa.fa-cab:before{content:"\f1ba"}</style><style media="all" id="fa-main">/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */.fa,.fab,.fad,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s linear infinite;animation:fa-spin 2s linear infinite}.fa-pulse{-webkit-animation:fa-spin 1s steps(8) infinite;animation:fa-spin 1s steps(8) infinite}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scaleX(-1);transform:scaleX(-1)}.fa-flip-vertical{-webkit-transform:scaleY(-1);transform:scaleY(-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical,.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1);transform:scale(-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;line-height:2em;position:relative;vertical-align:middle;width:2.5em}.fa-stack-1x,.fa-stack-2x{left:0;position:absolute;text-align:center;width:100%}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-500px:before{content:"\f26e"}.fa-accessible-icon:before{content:"\f368"}.fa-accusoft:before{content:"\f369"}.fa-acquisitions-incorporated:before{content:"\f6af"}.fa-ad:before{content:"\f641"}.fa-address-book:before{content:"\f2b9"}.fa-address-card:before{content:"\f2bb"}.fa-adjust:before{content:"\f042"}.fa-adn:before{content:"\f170"}.fa-adversal:before{content:"\f36a"}.fa-affiliatetheme:before{content:"\f36b"}.fa-air-freshener:before{content:"\f5d0"}.fa-airbnb:before{content:"\f834"}.fa-algolia:before{content:"\f36c"}.fa-align-center:before{content:"\f037"}.fa-align-justify:before{content:"\f039"}.fa-align-left:before{content:"\f036"}.fa-align-right:before{content:"\f038"}.fa-alipay:before{content:"\f642"}.fa-allergies:before{content:"\f461"}.fa-amazon:before{content:"\f270"}.fa-amazon-pay:before{content:"\f42c"}.fa-ambulance:before{content:"\f0f9"}.fa-american-sign-language-interpreting:before{content:"\f2a3"}.fa-amilia:before{content:"\f36d"}.fa-anchor:before{content:"\f13d"}.fa-android:before{content:"\f17b"}.fa-angellist:before{content:"\f209"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-down:before{content:"\f107"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angry:before{content:"\f556"}.fa-angrycreative:before{content:"\f36e"}.fa-angular:before{content:"\f420"}.fa-ankh:before{content:"\f644"}.fa-app-store:before{content:"\f36f"}.fa-app-store-ios:before{content:"\f370"}.fa-apper:before{content:"\f371"}.fa-apple:before{content:"\f179"}.fa-apple-alt:before{content:"\f5d1"}.fa-apple-pay:before{content:"\f415"}.fa-archive:before{content:"\f187"}.fa-archway:before{content:"\f557"}.fa-arrow-alt-circle-down:before{content:"\f358"}.fa-arrow-alt-circle-left:before{content:"\f359"}.fa-arrow-alt-circle-right:before{content:"\f35a"}.fa-arrow-alt-circle-up:before{content:"\f35b"}.fa-arrow-circle-down:before{content:"\f0ab"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-arrow-circle-up:before{content:"\f0aa"}.fa-arrow-down:before{content:"\f063"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-arrow-up:before{content:"\f062"}.fa-arrows-alt:before{content:"\f0b2"}.fa-arrows-alt-h:before{content:"\f337"}.fa-arrows-alt-v:before{content:"\f338"}.fa-artstation:before{content:"\f77a"}.fa-assistive-listening-systems:before{content:"\f2a2"}.fa-asterisk:before{content:"\f069"}.fa-asymmetrik:before{content:"\f372"}.fa-at:before{content:"\f1fa"}.fa-atlas:before{content:"\f558"}.fa-atlassian:before{content:"\f77b"}.fa-atom:before{content:"\f5d2"}.fa-audible:before{content:"\f373"}.fa-audio-description:before{content:"\f29e"}.fa-autoprefixer:before{content:"\f41c"}.fa-avianex:before{content:"\f374"}.fa-aviato:before{content:"\f421"}.fa-award:before{content:"\f559"}.fa-aws:before{content:"\f375"}.fa-baby:before{content:"\f77c"}.fa-baby-carriage:before{content:"\f77d"}.fa-backspace:before{content:"\f55a"}.fa-backward:before{content:"\f04a"}.fa-bacon:before{content:"\f7e5"}.fa-bacteria:before{content:"\e059"}.fa-bacterium:before{content:"\e05a"}.fa-bahai:before{content:"\f666"}.fa-balance-scale:before{content:"\f24e"}.fa-balance-scale-left:before{content:"\f515"}.fa-balance-scale-right:before{content:"\f516"}.fa-ban:before{content:"\f05e"}.fa-band-aid:before{content:"\f462"}.fa-bandcamp:before{content:"\f2d5"}.fa-barcode:before{content:"\f02a"}.fa-bars:before{content:"\f0c9"}.fa-baseball-ball:before{content:"\f433"}.fa-basketball-ball:before{content:"\f434"}.fa-bath:before{content:"\f2cd"}.fa-battery-empty:before{content:"\f244"}.fa-battery-full:before{content:"\f240"}.fa-battery-half:before{content:"\f242"}.fa-battery-quarter:before{content:"\f243"}.fa-battery-three-quarters:before{content:"\f241"}.fa-battle-net:before{content:"\f835"}.fa-bed:before{content:"\f236"}.fa-beer:before{content:"\f0fc"}.fa-behance:before{content:"\f1b4"}.fa-behance-square:before{content:"\f1b5"}.fa-bell:before{content:"\f0f3"}.fa-bell-slash:before{content:"\f1f6"}.fa-bezier-curve:before{content:"\f55b"}.fa-bible:before{content:"\f647"}.fa-bicycle:before{content:"\f206"}.fa-biking:before{content:"\f84a"}.fa-bimobject:before{content:"\f378"}.fa-binoculars:before{content:"\f1e5"}.fa-biohazard:before{content:"\f780"}.fa-birthday-cake:before{content:"\f1fd"}.fa-bitbucket:before{content:"\f171"}.fa-bitcoin:before{content:"\f379"}.fa-bity:before{content:"\f37a"}.fa-black-tie:before{content:"\f27e"}.fa-blackberry:before{content:"\f37b"}.fa-blender:before{content:"\f517"}.fa-blender-phone:before{content:"\f6b6"}.fa-blind:before{content:"\f29d"}.fa-blog:before{content:"\f781"}.fa-blogger:before{content:"\f37c"}.fa-blogger-b:before{content:"\f37d"}.fa-bluetooth:before{content:"\f293"}.fa-bluetooth-b:before{content:"\f294"}.fa-bold:before{content:"\f032"}.fa-bolt:before{content:"\f0e7"}.fa-bomb:before{content:"\f1e2"}.fa-bone:before{content:"\f5d7"}.fa-bong:before{content:"\f55c"}.fa-book:before{content:"\f02d"}.fa-book-dead:before{content:"\f6b7"}.fa-book-medical:before{content:"\f7e6"}.fa-book-open:before{content:"\f518"}.fa-book-reader:before{content:"\f5da"}.fa-bookmark:before{content:"\f02e"}.fa-bootstrap:before{content:"\f836"}.fa-border-all:before{content:"\f84c"}.fa-border-none:before{content:"\f850"}.fa-border-style:before{content:"\f853"}.fa-bowling-ball:before{content:"\f436"}.fa-box:before{content:"\f466"}.fa-box-open:before{content:"\f49e"}.fa-box-tissue:before{content:"\e05b"}.fa-boxes:before{content:"\f468"}.fa-braille:before{content:"\f2a1"}.fa-brain:before{content:"\f5dc"}.fa-bread-slice:before{content:"\f7ec"}.fa-briefcase:before{content:"\f0b1"}.fa-briefcase-medical:before{content:"\f469"}.fa-broadcast-tower:before{content:"\f519"}.fa-broom:before{content:"\f51a"}.fa-brush:before{content:"\f55d"}.fa-btc:before{content:"\f15a"}.fa-buffer:before{content:"\f837"}.fa-bug:before{content:"\f188"}.fa-building:before{content:"\f1ad"}.fa-bullhorn:before{content:"\f0a1"}.fa-bullseye:before{content:"\f140"}.fa-burn:before{content:"\f46a"}.fa-buromobelexperte:before{content:"\f37f"}.fa-bus:before{content:"\f207"}.fa-bus-alt:before{content:"\f55e"}.fa-business-time:before{content:"\f64a"}.fa-buy-n-large:before{content:"\f8a6"}.fa-buysellads:before{content:"\f20d"}.fa-calculator:before{content:"\f1ec"}.fa-calendar:before{content:"\f133"}.fa-calendar-alt:before{content:"\f073"}.fa-calendar-check:before{content:"\f274"}.fa-calendar-day:before{content:"\f783"}.fa-calendar-minus:before{content:"\f272"}.fa-calendar-plus:before{content:"\f271"}.fa-calendar-times:before{content:"\f273"}.fa-calendar-week:before{content:"\f784"}.fa-camera:before{content:"\f030"}.fa-camera-retro:before{content:"\f083"}.fa-campground:before{content:"\f6bb"}.fa-canadian-maple-leaf:before{content:"\f785"}.fa-candy-cane:before{content:"\f786"}.fa-cannabis:before{content:"\f55f"}.fa-capsules:before{content:"\f46b"}.fa-car:before{content:"\f1b9"}.fa-car-alt:before{content:"\f5de"}.fa-car-battery:before{content:"\f5df"}.fa-car-crash:before{content:"\f5e1"}.fa-car-side:before{content:"\f5e4"}.fa-caravan:before{content:"\f8ff"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-left:before{content:"\f0d9"}.fa-caret-right:before{content:"\f0da"}.fa-caret-square-down:before{content:"\f150"}.fa-caret-square-left:before{content:"\f191"}.fa-caret-square-right:before{content:"\f152"}.fa-caret-square-up:before{content:"\f151"}.fa-caret-up:before{content:"\f0d8"}.fa-carrot:before{content:"\f787"}.fa-cart-arrow-down:before{content:"\f218"}.fa-cart-plus:before{content:"\f217"}.fa-cash-register:before{content:"\f788"}.fa-cat:before{content:"\f6be"}.fa-cc-amazon-pay:before{content:"\f42d"}.fa-cc-amex:before{content:"\f1f3"}.fa-cc-apple-pay:before{content:"\f416"}.fa-cc-diners-club:before{content:"\f24c"}.fa-cc-discover:before{content:"\f1f2"}.fa-cc-jcb:before{content:"\f24b"}.fa-cc-mastercard:before{content:"\f1f1"}.fa-cc-paypal:before{content:"\f1f4"}.fa-cc-stripe:before{content:"\f1f5"}.fa-cc-visa:before{content:"\f1f0"}.fa-centercode:before{content:"\f380"}.fa-centos:before{content:"\f789"}.fa-certificate:before{content:"\f0a3"}.fa-chair:before{content:"\f6c0"}.fa-chalkboard:before{content:"\f51b"}.fa-chalkboard-teacher:before{content:"\f51c"}.fa-charging-station:before{content:"\f5e7"}.fa-chart-area:before{content:"\f1fe"}.fa-chart-bar:before{content:"\f080"}.fa-chart-line:before{content:"\f201"}.fa-chart-pie:before{content:"\f200"}.fa-check:before{content:"\f00c"}.fa-check-circle:before{content:"\f058"}.fa-check-double:before{content:"\f560"}.fa-check-square:before{content:"\f14a"}.fa-cheese:before{content:"\f7ef"}.fa-chess:before{content:"\f439"}.fa-chess-bishop:before{content:"\f43a"}.fa-chess-board:before{content:"\f43c"}.fa-chess-king:before{content:"\f43f"}.fa-chess-knight:before{content:"\f441"}.fa-chess-pawn:before{content:"\f443"}.fa-chess-queen:before{content:"\f445"}.fa-chess-rook:before{content:"\f447"}.fa-chevron-circle-down:before{content:"\f13a"}.fa-chevron-circle-left:before{content:"\f137"}.fa-chevron-circle-right:before{content:"\f138"}.fa-chevron-circle-up:before{content:"\f139"}.fa-chevron-down:before{content:"\f078"}.fa-chevron-left:before{content:"\f053"}.fa-chevron-right:before{content:"\f054"}.fa-chevron-up:before{content:"\f077"}.fa-child:before{content:"\f1ae"}.fa-chrome:before{content:"\f268"}.fa-chromecast:before{content:"\f838"}.fa-church:before{content:"\f51d"}.fa-circle:before{content:"\f111"}.fa-circle-notch:before{content:"\f1ce"}.fa-city:before{content:"\f64f"}.fa-clinic-medical:before{content:"\f7f2"}.fa-clipboard:before{content:"\f328"}.fa-clipboard-check:before{content:"\f46c"}.fa-clipboard-list:before{content:"\f46d"}.fa-clock:before{content:"\f017"}.fa-clone:before{content:"\f24d"}.fa-closed-captioning:before{content:"\f20a"}.fa-cloud:before{content:"\f0c2"}.fa-cloud-download-alt:before{content:"\f381"}.fa-cloud-meatball:before{content:"\f73b"}.fa-cloud-moon:before{content:"\f6c3"}.fa-cloud-moon-rain:before{content:"\f73c"}.fa-cloud-rain:before{content:"\f73d"}.fa-cloud-showers-heavy:before{content:"\f740"}.fa-cloud-sun:before{content:"\f6c4"}.fa-cloud-sun-rain:before{content:"\f743"}.fa-cloud-upload-alt:before{content:"\f382"}.fa-cloudflare:before{content:"\e07d"}.fa-cloudscale:before{content:"\f383"}.fa-cloudsmith:before{content:"\f384"}.fa-cloudversify:before{content:"\f385"}.fa-cocktail:before{content:"\f561"}.fa-code:before{content:"\f121"}.fa-code-branch:before{content:"\f126"}.fa-codepen:before{content:"\f1cb"}.fa-codiepie:before{content:"\f284"}.fa-coffee:before{content:"\f0f4"}.fa-cog:before{content:"\f013"}.fa-cogs:before{content:"\f085"}.fa-coins:before{content:"\f51e"}.fa-columns:before{content:"\f0db"}.fa-comment:before{content:"\f075"}.fa-comment-alt:before{content:"\f27a"}.fa-comment-dollar:before{content:"\f651"}.fa-comment-dots:before{content:"\f4ad"}.fa-comment-medical:before{content:"\f7f5"}.fa-comment-slash:before{content:"\f4b3"}.fa-comments:before{content:"\f086"}.fa-comments-dollar:before{content:"\f653"}.fa-compact-disc:before{content:"\f51f"}.fa-compass:before{content:"\f14e"}.fa-compress:before{content:"\f066"}.fa-compress-alt:before{content:"\f422"}.fa-compress-arrows-alt:before{content:"\f78c"}.fa-concierge-bell:before{content:"\f562"}.fa-confluence:before{content:"\f78d"}.fa-connectdevelop:before{content:"\f20e"}.fa-contao:before{content:"\f26d"}.fa-cookie:before{content:"\f563"}.fa-cookie-bite:before{content:"\f564"}.fa-copy:before{content:"\f0c5"}.fa-copyright:before{content:"\f1f9"}.fa-cotton-bureau:before{content:"\f89e"}.fa-couch:before{content:"\f4b8"}.fa-cpanel:before{content:"\f388"}.fa-creative-commons:before{content:"\f25e"}.fa-creative-commons-by:before{content:"\f4e7"}.fa-creative-commons-nc:before{content:"\f4e8"}.fa-creative-commons-nc-eu:before{content:"\f4e9"}.fa-creative-commons-nc-jp:before{content:"\f4ea"}.fa-creative-commons-nd:before{content:"\f4eb"}.fa-creative-commons-pd:before{content:"\f4ec"}.fa-creative-commons-pd-alt:before{content:"\f4ed"}.fa-creative-commons-remix:before{content:"\f4ee"}.fa-creative-commons-sa:before{content:"\f4ef"}.fa-creative-commons-sampling:before{content:"\f4f0"}.fa-creative-commons-sampling-plus:before{content:"\f4f1"}.fa-creative-commons-share:before{content:"\f4f2"}.fa-creative-commons-zero:before{content:"\f4f3"}.fa-credit-card:before{content:"\f09d"}.fa-critical-role:before{content:"\f6c9"}.fa-crop:before{content:"\f125"}.fa-crop-alt:before{content:"\f565"}.fa-cross:before{content:"\f654"}.fa-crosshairs:before{content:"\f05b"}.fa-crow:before{content:"\f520"}.fa-crown:before{content:"\f521"}.fa-crutch:before{content:"\f7f7"}.fa-css3:before{content:"\f13c"}.fa-css3-alt:before{content:"\f38b"}.fa-cube:before{content:"\f1b2"}.fa-cubes:before{content:"\f1b3"}.fa-cut:before{content:"\f0c4"}.fa-cuttlefish:before{content:"\f38c"}.fa-d-and-d:before{content:"\f38d"}.fa-d-and-d-beyond:before{content:"\f6ca"}.fa-dailymotion:before{content:"\e052"}.fa-dashcube:before{content:"\f210"}.fa-database:before{content:"\f1c0"}.fa-deaf:before{content:"\f2a4"}.fa-deezer:before{content:"\e077"}.fa-delicious:before{content:"\f1a5"}.fa-democrat:before{content:"\f747"}.fa-deploydog:before{content:"\f38e"}.fa-deskpro:before{content:"\f38f"}.fa-desktop:before{content:"\f108"}.fa-dev:before{content:"\f6cc"}.fa-deviantart:before{content:"\f1bd"}.fa-dharmachakra:before{content:"\f655"}.fa-dhl:before{content:"\f790"}.fa-diagnoses:before{content:"\f470"}.fa-diaspora:before{content:"\f791"}.fa-dice:before{content:"\f522"}.fa-dice-d20:before{content:"\f6cf"}.fa-dice-d6:before{content:"\f6d1"}.fa-dice-five:before{content:"\f523"}.fa-dice-four:before{content:"\f524"}.fa-dice-one:before{content:"\f525"}.fa-dice-six:before{content:"\f526"}.fa-dice-three:before{content:"\f527"}.fa-dice-two:before{content:"\f528"}.fa-digg:before{content:"\f1a6"}.fa-digital-ocean:before{content:"\f391"}.fa-digital-tachograph:before{content:"\f566"}.fa-directions:before{content:"\f5eb"}.fa-discord:before{content:"\f392"}.fa-discourse:before{content:"\f393"}.fa-disease:before{content:"\f7fa"}.fa-divide:before{content:"\f529"}.fa-dizzy:before{content:"\f567"}.fa-dna:before{content:"\f471"}.fa-dochub:before{content:"\f394"}.fa-docker:before{content:"\f395"}.fa-dog:before{content:"\f6d3"}.fa-dollar-sign:before{content:"\f155"}.fa-dolly:before{content:"\f472"}.fa-dolly-flatbed:before{content:"\f474"}.fa-donate:before{content:"\f4b9"}.fa-door-closed:before{content:"\f52a"}.fa-door-open:before{content:"\f52b"}.fa-dot-circle:before{content:"\f192"}.fa-dove:before{content:"\f4ba"}.fa-download:before{content:"\f019"}.fa-draft2digital:before{content:"\f396"}.fa-drafting-compass:before{content:"\f568"}.fa-dragon:before{content:"\f6d5"}.fa-draw-polygon:before{content:"\f5ee"}.fa-dribbble:before{content:"\f17d"}.fa-dribbble-square:before{content:"\f397"}.fa-dropbox:before{content:"\f16b"}.fa-drum:before{content:"\f569"}.fa-drum-steelpan:before{content:"\f56a"}.fa-drumstick-bite:before{content:"\f6d7"}.fa-drupal:before{content:"\f1a9"}.fa-dumbbell:before{content:"\f44b"}.fa-dumpster:before{content:"\f793"}.fa-dumpster-fire:before{content:"\f794"}.fa-dungeon:before{content:"\f6d9"}.fa-dyalog:before{content:"\f399"}.fa-earlybirds:before{content:"\f39a"}.fa-ebay:before{content:"\f4f4"}.fa-edge:before{content:"\f282"}.fa-edge-legacy:before{content:"\e078"}.fa-edit:before{content:"\f044"}.fa-egg:before{content:"\f7fb"}.fa-eject:before{content:"\f052"}.fa-elementor:before{content:"\f430"}.fa-ellipsis-h:before{content:"\f141"}.fa-ellipsis-v:before{content:"\f142"}.fa-ello:before{content:"\f5f1"}.fa-ember:before{content:"\f423"}.fa-empire:before{content:"\f1d1"}.fa-envelope:before{content:"\f0e0"}.fa-envelope-open:before{content:"\f2b6"}.fa-envelope-open-text:before{content:"\f658"}.fa-envelope-square:before{content:"\f199"}.fa-envira:before{content:"\f299"}.fa-equals:before{content:"\f52c"}.fa-eraser:before{content:"\f12d"}.fa-erlang:before{content:"\f39d"}.fa-ethereum:before{content:"\f42e"}.fa-ethernet:before{content:"\f796"}.fa-etsy:before{content:"\f2d7"}.fa-euro-sign:before{content:"\f153"}.fa-evernote:before{content:"\f839"}.fa-exchange-alt:before{content:"\f362"}.fa-exclamation:before{content:"\f12a"}.fa-exclamation-circle:before{content:"\f06a"}.fa-exclamation-triangle:before{content:"\f071"}.fa-expand:before{content:"\f065"}.fa-expand-alt:before{content:"\f424"}.fa-expand-arrows-alt:before{content:"\f31e"}.fa-expeditedssl:before{content:"\f23e"}.fa-external-link-alt:before{content:"\f35d"}.fa-external-link-square-alt:before{content:"\f360"}.fa-eye:before{content:"\f06e"}.fa-eye-dropper:before{content:"\f1fb"}.fa-eye-slash:before{content:"\f070"}.fa-facebook:before{content:"\f09a"}.fa-facebook-f:before{content:"\f39e"}.fa-facebook-messenger:before{content:"\f39f"}.fa-facebook-square:before{content:"\f082"}.fa-fan:before{content:"\f863"}.fa-fantasy-flight-games:before{content:"\f6dc"}.fa-fast-backward:before{content:"\f049"}.fa-fast-forward:before{content:"\f050"}.fa-faucet:before{content:"\e005"}.fa-fax:before{content:"\f1ac"}.fa-feather:before{content:"\f52d"}.fa-feather-alt:before{content:"\f56b"}.fa-fedex:before{content:"\f797"}.fa-fedora:before{content:"\f798"}.fa-female:before{content:"\f182"}.fa-fighter-jet:before{content:"\f0fb"}.fa-figma:before{content:"\f799"}.fa-file:before{content:"\f15b"}.fa-file-alt:before{content:"\f15c"}.fa-file-archive:before{content:"\f1c6"}.fa-file-audio:before{content:"\f1c7"}.fa-file-code:before{content:"\f1c9"}.fa-file-contract:before{content:"\f56c"}.fa-file-csv:before{content:"\f6dd"}.fa-file-download:before{content:"\f56d"}.fa-file-excel:before{content:"\f1c3"}.fa-file-export:before{content:"\f56e"}.fa-file-image:before{content:"\f1c5"}.fa-file-import:before{content:"\f56f"}.fa-file-invoice:before{content:"\f570"}.fa-file-invoice-dollar:before{content:"\f571"}.fa-file-medical:before{content:"\f477"}.fa-file-medical-alt:before{content:"\f478"}.fa-file-pdf:before{content:"\f1c1"}.fa-file-powerpoint:before{content:"\f1c4"}.fa-file-prescription:before{content:"\f572"}.fa-file-signature:before{content:"\f573"}.fa-file-upload:before{content:"\f574"}.fa-file-video:before{content:"\f1c8"}.fa-file-word:before{content:"\f1c2"}.fa-fill:before{content:"\f575"}.fa-fill-drip:before{content:"\f576"}.fa-film:before{content:"\f008"}.fa-filter:before{content:"\f0b0"}.fa-fingerprint:before{content:"\f577"}.fa-fire:before{content:"\f06d"}.fa-fire-alt:before{content:"\f7e4"}.fa-fire-extinguisher:before{content:"\f134"}.fa-firefox:before{content:"\f269"}.fa-firefox-browser:before{content:"\e007"}.fa-first-aid:before{content:"\f479"}.fa-first-order:before{content:"\f2b0"}.fa-first-order-alt:before{content:"\f50a"}.fa-firstdraft:before{content:"\f3a1"}.fa-fish:before{content:"\f578"}.fa-fist-raised:before{content:"\f6de"}.fa-flag:before{content:"\f024"}.fa-flag-checkered:before{content:"\f11e"}.fa-flag-usa:before{content:"\f74d"}.fa-flask:before{content:"\f0c3"}.fa-flickr:before{content:"\f16e"}.fa-flipboard:before{content:"\f44d"}.fa-flushed:before{content:"\f579"}.fa-fly:before{content:"\f417"}.fa-folder:before{content:"\f07b"}.fa-folder-minus:before{content:"\f65d"}.fa-folder-open:before{content:"\f07c"}.fa-folder-plus:before{content:"\f65e"}.fa-font:before{content:"\f031"}.fa-font-awesome:before{content:"\f2b4"}.fa-font-awesome-alt:before{content:"\f35c"}.fa-font-awesome-flag:before{content:"\f425"}.fa-font-awesome-logo-full:before{content:"\f4e6"}.fa-fonticons:before{content:"\f280"}.fa-fonticons-fi:before{content:"\f3a2"}.fa-football-ball:before{content:"\f44e"}.fa-fort-awesome:before{content:"\f286"}.fa-fort-awesome-alt:before{content:"\f3a3"}.fa-forumbee:before{content:"\f211"}.fa-forward:before{content:"\f04e"}.fa-foursquare:before{content:"\f180"}.fa-free-code-camp:before{content:"\f2c5"}.fa-freebsd:before{content:"\f3a4"}.fa-frog:before{content:"\f52e"}.fa-frown:before{content:"\f119"}.fa-frown-open:before{content:"\f57a"}.fa-fulcrum:before{content:"\f50b"}.fa-funnel-dollar:before{content:"\f662"}.fa-futbol:before{content:"\f1e3"}.fa-galactic-republic:before{content:"\f50c"}.fa-galactic-senate:before{content:"\f50d"}.fa-gamepad:before{content:"\f11b"}.fa-gas-pump:before{content:"\f52f"}.fa-gavel:before{content:"\f0e3"}.fa-gem:before{content:"\f3a5"}.fa-genderless:before{content:"\f22d"}.fa-get-pocket:before{content:"\f265"}.fa-gg:before{content:"\f260"}.fa-gg-circle:before{content:"\f261"}.fa-ghost:before{content:"\f6e2"}.fa-gift:before{content:"\f06b"}.fa-gifts:before{content:"\f79c"}.fa-git:before{content:"\f1d3"}.fa-git-alt:before{content:"\f841"}.fa-git-square:before{content:"\f1d2"}.fa-github:before{content:"\f09b"}.fa-github-alt:before{content:"\f113"}.fa-github-square:before{content:"\f092"}.fa-gitkraken:before{content:"\f3a6"}.fa-gitlab:before{content:"\f296"}.fa-gitter:before{content:"\f426"}.fa-glass-cheers:before{content:"\f79f"}.fa-glass-martini:before{content:"\f000"}.fa-glass-martini-alt:before{content:"\f57b"}.fa-glass-whiskey:before{content:"\f7a0"}.fa-glasses:before{content:"\f530"}.fa-glide:before{content:"\f2a5"}.fa-glide-g:before{content:"\f2a6"}.fa-globe:before{content:"\f0ac"}.fa-globe-africa:before{content:"\f57c"}.fa-globe-americas:before{content:"\f57d"}.fa-globe-asia:before{content:"\f57e"}.fa-globe-europe:before{content:"\f7a2"}.fa-gofore:before{content:"\f3a7"}.fa-golf-ball:before{content:"\f450"}.fa-goodreads:before{content:"\f3a8"}.fa-goodreads-g:before{content:"\f3a9"}.fa-google:before{content:"\f1a0"}.fa-google-drive:before{content:"\f3aa"}.fa-google-pay:before{content:"\e079"}.fa-google-play:before{content:"\f3ab"}.fa-google-plus:before{content:"\f2b3"}.fa-google-plus-g:before{content:"\f0d5"}.fa-google-plus-square:before{content:"\f0d4"}.fa-google-wallet:before{content:"\f1ee"}.fa-gopuram:before{content:"\f664"}.fa-graduation-cap:before{content:"\f19d"}.fa-gratipay:before{content:"\f184"}.fa-grav:before{content:"\f2d6"}.fa-greater-than:before{content:"\f531"}.fa-greater-than-equal:before{content:"\f532"}.fa-grimace:before{content:"\f57f"}.fa-grin:before{content:"\f580"}.fa-grin-alt:before{content:"\f581"}.fa-grin-beam:before{content:"\f582"}.fa-grin-beam-sweat:before{content:"\f583"}.fa-grin-hearts:before{content:"\f584"}.fa-grin-squint:before{content:"\f585"}.fa-grin-squint-tears:before{content:"\f586"}.fa-grin-stars:before{content:"\f587"}.fa-grin-tears:before{content:"\f588"}.fa-grin-tongue:before{content:"\f589"}.fa-grin-tongue-squint:before{content:"\f58a"}.fa-grin-tongue-wink:before{content:"\f58b"}.fa-grin-wink:before{content:"\f58c"}.fa-grip-horizontal:before{content:"\f58d"}.fa-grip-lines:before{content:"\f7a4"}.fa-grip-lines-vertical:before{content:"\f7a5"}.fa-grip-vertical:before{content:"\f58e"}.fa-gripfire:before{content:"\f3ac"}.fa-grunt:before{content:"\f3ad"}.fa-guilded:before{content:"\e07e"}.fa-guitar:before{content:"\f7a6"}.fa-gulp:before{content:"\f3ae"}.fa-h-square:before{content:"\f0fd"}.fa-hacker-news:before{content:"\f1d4"}.fa-hacker-news-square:before{content:"\f3af"}.fa-hackerrank:before{content:"\f5f7"}.fa-hamburger:before{content:"\f805"}.fa-hammer:before{content:"\f6e3"}.fa-hamsa:before{content:"\f665"}.fa-hand-holding:before{content:"\f4bd"}.fa-hand-holding-heart:before{content:"\f4be"}.fa-hand-holding-medical:before{content:"\e05c"}.fa-hand-holding-usd:before{content:"\f4c0"}.fa-hand-holding-water:before{content:"\f4c1"}.fa-hand-lizard:before{content:"\f258"}.fa-hand-middle-finger:before{content:"\f806"}.fa-hand-paper:before{content:"\f256"}.fa-hand-peace:before{content:"\f25b"}.fa-hand-point-down:before{content:"\f0a7"}.fa-hand-point-left:before{content:"\f0a5"}.fa-hand-point-right:before{content:"\f0a4"}.fa-hand-point-up:before{content:"\f0a6"}.fa-hand-pointer:before{content:"\f25a"}.fa-hand-rock:before{content:"\f255"}.fa-hand-scissors:before{content:"\f257"}.fa-hand-sparkles:before{content:"\e05d"}.fa-hand-spock:before{content:"\f259"}.fa-hands:before{content:"\f4c2"}.fa-hands-helping:before{content:"\f4c4"}.fa-hands-wash:before{content:"\e05e"}.fa-handshake:before{content:"\f2b5"}.fa-handshake-alt-slash:before{content:"\e05f"}.fa-handshake-slash:before{content:"\e060"}.fa-hanukiah:before{content:"\f6e6"}.fa-hard-hat:before{content:"\f807"}.fa-hashtag:before{content:"\f292"}.fa-hat-cowboy:before{content:"\f8c0"}.fa-hat-cowboy-side:before{content:"\f8c1"}.fa-hat-wizard:before{content:"\f6e8"}.fa-hdd:before{content:"\f0a0"}.fa-head-side-cough:before{content:"\e061"}.fa-head-side-cough-slash:before{content:"\e062"}.fa-head-side-mask:before{content:"\e063"}.fa-head-side-virus:before{content:"\e064"}.fa-heading:before{content:"\f1dc"}.fa-headphones:before{content:"\f025"}.fa-headphones-alt:before{content:"\f58f"}.fa-headset:before{content:"\f590"}.fa-heart:before{content:"\f004"}.fa-heart-broken:before{content:"\f7a9"}.fa-heartbeat:before{content:"\f21e"}.fa-helicopter:before{content:"\f533"}.fa-highlighter:before{content:"\f591"}.fa-hiking:before{content:"\f6ec"}.fa-hippo:before{content:"\f6ed"}.fa-hips:before{content:"\f452"}.fa-hire-a-helper:before{content:"\f3b0"}.fa-history:before{content:"\f1da"}.fa-hive:before{content:"\e07f"}.fa-hockey-puck:before{content:"\f453"}.fa-holly-berry:before{content:"\f7aa"}.fa-home:before{content:"\f015"}.fa-hooli:before{content:"\f427"}.fa-hornbill:before{content:"\f592"}.fa-horse:before{content:"\f6f0"}.fa-horse-head:before{content:"\f7ab"}.fa-hospital:before{content:"\f0f8"}.fa-hospital-alt:before{content:"\f47d"}.fa-hospital-symbol:before{content:"\f47e"}.fa-hospital-user:before{content:"\f80d"}.fa-hot-tub:before{content:"\f593"}.fa-hotdog:before{content:"\f80f"}.fa-hotel:before{content:"\f594"}.fa-hotjar:before{content:"\f3b1"}.fa-hourglass:before{content:"\f254"}.fa-hourglass-end:before{content:"\f253"}.fa-hourglass-half:before{content:"\f252"}.fa-hourglass-start:before{content:"\f251"}.fa-house-damage:before{content:"\f6f1"}.fa-house-user:before{content:"\e065"}.fa-houzz:before{content:"\f27c"}.fa-hryvnia:before{content:"\f6f2"}.fa-html5:before{content:"\f13b"}.fa-hubspot:before{content:"\f3b2"}.fa-i-cursor:before{content:"\f246"}.fa-ice-cream:before{content:"\f810"}.fa-icicles:before{content:"\f7ad"}.fa-icons:before{content:"\f86d"}.fa-id-badge:before{content:"\f2c1"}.fa-id-card:before{content:"\f2c2"}.fa-id-card-alt:before{content:"\f47f"}.fa-ideal:before{content:"\e013"}.fa-igloo:before{content:"\f7ae"}.fa-image:before{content:"\f03e"}.fa-images:before{content:"\f302"}.fa-imdb:before{content:"\f2d8"}.fa-inbox:before{content:"\f01c"}.fa-indent:before{content:"\f03c"}.fa-industry:before{content:"\f275"}.fa-infinity:before{content:"\f534"}.fa-info:before{content:"\f129"}.fa-info-circle:before{content:"\f05a"}.fa-innosoft:before{content:"\e080"}.fa-instagram:before{content:"\f16d"}.fa-instagram-square:before{content:"\e055"}.fa-instalod:before{content:"\e081"}.fa-intercom:before{content:"\f7af"}.fa-internet-explorer:before{content:"\f26b"}.fa-invision:before{content:"\f7b0"}.fa-ioxhost:before{content:"\f208"}.fa-italic:before{content:"\f033"}.fa-itch-io:before{content:"\f83a"}.fa-itunes:before{content:"\f3b4"}.fa-itunes-note:before{content:"\f3b5"}.fa-java:before{content:"\f4e4"}.fa-jedi:before{content:"\f669"}.fa-jedi-order:before{content:"\f50e"}.fa-jenkins:before{content:"\f3b6"}.fa-jira:before{content:"\f7b1"}.fa-joget:before{content:"\f3b7"}.fa-joint:before{content:"\f595"}.fa-joomla:before{content:"\f1aa"}.fa-journal-whills:before{content:"\f66a"}.fa-js:before{content:"\f3b8"}.fa-js-square:before{content:"\f3b9"}.fa-jsfiddle:before{content:"\f1cc"}.fa-kaaba:before{content:"\f66b"}.fa-kaggle:before{content:"\f5fa"}.fa-key:before{content:"\f084"}.fa-keybase:before{content:"\f4f5"}.fa-keyboard:before{content:"\f11c"}.fa-keycdn:before{content:"\f3ba"}.fa-khanda:before{content:"\f66d"}.fa-kickstarter:before{content:"\f3bb"}.fa-kickstarter-k:before{content:"\f3bc"}.fa-kiss:before{content:"\f596"}.fa-kiss-beam:before{content:"\f597"}.fa-kiss-wink-heart:before{content:"\f598"}.fa-kiwi-bird:before{content:"\f535"}.fa-korvue:before{content:"\f42f"}.fa-landmark:before{content:"\f66f"}.fa-language:before{content:"\f1ab"}.fa-laptop:before{content:"\f109"}.fa-laptop-code:before{content:"\f5fc"}.fa-laptop-house:before{content:"\e066"}.fa-laptop-medical:before{content:"\f812"}.fa-laravel:before{content:"\f3bd"}.fa-lastfm:before{content:"\f202"}.fa-lastfm-square:before{content:"\f203"}.fa-laugh:before{content:"\f599"}.fa-laugh-beam:before{content:"\f59a"}.fa-laugh-squint:before{content:"\f59b"}.fa-laugh-wink:before{content:"\f59c"}.fa-layer-group:before{content:"\f5fd"}.fa-leaf:before{content:"\f06c"}.fa-leanpub:before{content:"\f212"}.fa-lemon:before{content:"\f094"}.fa-less:before{content:"\f41d"}.fa-less-than:before{content:"\f536"}.fa-less-than-equal:before{content:"\f537"}.fa-level-down-alt:before{content:"\f3be"}.fa-level-up-alt:before{content:"\f3bf"}.fa-life-ring:before{content:"\f1cd"}.fa-lightbulb:before{content:"\f0eb"}.fa-line:before{content:"\f3c0"}.fa-link:before{content:"\f0c1"}.fa-linkedin:before{content:"\f08c"}.fa-linkedin-in:before{content:"\f0e1"}.fa-linode:before{content:"\f2b8"}.fa-linux:before{content:"\f17c"}.fa-lira-sign:before{content:"\f195"}.fa-list:before{content:"\f03a"}.fa-list-alt:before{content:"\f022"}.fa-list-ol:before{content:"\f0cb"}.fa-list-ul:before{content:"\f0ca"}.fa-location-arrow:before{content:"\f124"}.fa-lock:before{content:"\f023"}.fa-lock-open:before{content:"\f3c1"}.fa-long-arrow-alt-down:before{content:"\f309"}.fa-long-arrow-alt-left:before{content:"\f30a"}.fa-long-arrow-alt-right:before{content:"\f30b"}.fa-long-arrow-alt-up:before{content:"\f30c"}.fa-low-vision:before{content:"\f2a8"}.fa-luggage-cart:before{content:"\f59d"}.fa-lungs:before{content:"\f604"}.fa-lungs-virus:before{content:"\e067"}.fa-lyft:before{content:"\f3c3"}.fa-magento:before{content:"\f3c4"}.fa-magic:before{content:"\f0d0"}.fa-magnet:before{content:"\f076"}.fa-mail-bulk:before{content:"\f674"}.fa-mailchimp:before{content:"\f59e"}.fa-male:before{content:"\f183"}.fa-mandalorian:before{content:"\f50f"}.fa-map:before{content:"\f279"}.fa-map-marked:before{content:"\f59f"}.fa-map-marked-alt:before{content:"\f5a0"}.fa-map-marker:before{content:"\f041"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-map-pin:before{content:"\f276"}.fa-map-signs:before{content:"\f277"}.fa-markdown:before{content:"\f60f"}.fa-marker:before{content:"\f5a1"}.fa-mars:before{content:"\f222"}.fa-mars-double:before{content:"\f227"}.fa-mars-stroke:before{content:"\f229"}.fa-mars-stroke-h:before{content:"\f22b"}.fa-mars-stroke-v:before{content:"\f22a"}.fa-mask:before{content:"\f6fa"}.fa-mastodon:before{content:"\f4f6"}.fa-maxcdn:before{content:"\f136"}.fa-mdb:before{content:"\f8ca"}.fa-medal:before{content:"\f5a2"}.fa-medapps:before{content:"\f3c6"}.fa-medium:before{content:"\f23a"}.fa-medium-m:before{content:"\f3c7"}.fa-medkit:before{content:"\f0fa"}.fa-medrt:before{content:"\f3c8"}.fa-meetup:before{content:"\f2e0"}.fa-megaport:before{content:"\f5a3"}.fa-meh:before{content:"\f11a"}.fa-meh-blank:before{content:"\f5a4"}.fa-meh-rolling-eyes:before{content:"\f5a5"}.fa-memory:before{content:"\f538"}.fa-mendeley:before{content:"\f7b3"}.fa-menorah:before{content:"\f676"}.fa-mercury:before{content:"\f223"}.fa-meteor:before{content:"\f753"}.fa-microblog:before{content:"\e01a"}.fa-microchip:before{content:"\f2db"}.fa-microphone:before{content:"\f130"}.fa-microphone-alt:before{content:"\f3c9"}.fa-microphone-alt-slash:before{content:"\f539"}.fa-microphone-slash:before{content:"\f131"}.fa-microscope:before{content:"\f610"}.fa-microsoft:before{content:"\f3ca"}.fa-minus:before{content:"\f068"}.fa-minus-circle:before{content:"\f056"}.fa-minus-square:before{content:"\f146"}.fa-mitten:before{content:"\f7b5"}.fa-mix:before{content:"\f3cb"}.fa-mixcloud:before{content:"\f289"}.fa-mixer:before{content:"\e056"}.fa-mizuni:before{content:"\f3cc"}.fa-mobile:before{content:"\f10b"}.fa-mobile-alt:before{content:"\f3cd"}.fa-modx:before{content:"\f285"}.fa-monero:before{content:"\f3d0"}.fa-money-bill:before{content:"\f0d6"}.fa-money-bill-alt:before{content:"\f3d1"}.fa-money-bill-wave:before{content:"\f53a"}.fa-money-bill-wave-alt:before{content:"\f53b"}.fa-money-check:before{content:"\f53c"}.fa-money-check-alt:before{content:"\f53d"}.fa-monument:before{content:"\f5a6"}.fa-moon:before{content:"\f186"}.fa-mortar-pestle:before{content:"\f5a7"}.fa-mosque:before{content:"\f678"}.fa-motorcycle:before{content:"\f21c"}.fa-mountain:before{content:"\f6fc"}.fa-mouse:before{content:"\f8cc"}.fa-mouse-pointer:before{content:"\f245"}.fa-mug-hot:before{content:"\f7b6"}.fa-music:before{content:"\f001"}.fa-napster:before{content:"\f3d2"}.fa-neos:before{content:"\f612"}.fa-network-wired:before{content:"\f6ff"}.fa-neuter:before{content:"\f22c"}.fa-newspaper:before{content:"\f1ea"}.fa-nimblr:before{content:"\f5a8"}.fa-node:before{content:"\f419"}.fa-node-js:before{content:"\f3d3"}.fa-not-equal:before{content:"\f53e"}.fa-notes-medical:before{content:"\f481"}.fa-npm:before{content:"\f3d4"}.fa-ns8:before{content:"\f3d5"}.fa-nutritionix:before{content:"\f3d6"}.fa-object-group:before{content:"\f247"}.fa-object-ungroup:before{content:"\f248"}.fa-octopus-deploy:before{content:"\e082"}.fa-odnoklassniki:before{content:"\f263"}.fa-odnoklassniki-square:before{content:"\f264"}.fa-oil-can:before{content:"\f613"}.fa-old-republic:before{content:"\f510"}.fa-om:before{content:"\f679"}.fa-opencart:before{content:"\f23d"}.fa-openid:before{content:"\f19b"}.fa-opera:before{content:"\f26a"}.fa-optin-monster:before{content:"\f23c"}.fa-orcid:before{content:"\f8d2"}.fa-osi:before{content:"\f41a"}.fa-otter:before{content:"\f700"}.fa-outdent:before{content:"\f03b"}.fa-page4:before{content:"\f3d7"}.fa-pagelines:before{content:"\f18c"}.fa-pager:before{content:"\f815"}.fa-paint-brush:before{content:"\f1fc"}.fa-paint-roller:before{content:"\f5aa"}.fa-palette:before{content:"\f53f"}.fa-palfed:before{content:"\f3d8"}.fa-pallet:before{content:"\f482"}.fa-paper-plane:before{content:"\f1d8"}.fa-paperclip:before{content:"\f0c6"}.fa-parachute-box:before{content:"\f4cd"}.fa-paragraph:before{content:"\f1dd"}.fa-parking:before{content:"\f540"}.fa-passport:before{content:"\f5ab"}.fa-pastafarianism:before{content:"\f67b"}.fa-paste:before{content:"\f0ea"}.fa-patreon:before{content:"\f3d9"}.fa-pause:before{content:"\f04c"}.fa-pause-circle:before{content:"\f28b"}.fa-paw:before{content:"\f1b0"}.fa-paypal:before{content:"\f1ed"}.fa-peace:before{content:"\f67c"}.fa-pen:before{content:"\f304"}.fa-pen-alt:before{content:"\f305"}.fa-pen-fancy:before{content:"\f5ac"}.fa-pen-nib:before{content:"\f5ad"}.fa-pen-square:before{content:"\f14b"}.fa-pencil-alt:before{content:"\f303"}.fa-pencil-ruler:before{content:"\f5ae"}.fa-penny-arcade:before{content:"\f704"}.fa-people-arrows:before{content:"\e068"}.fa-people-carry:before{content:"\f4ce"}.fa-pepper-hot:before{content:"\f816"}.fa-perbyte:before{content:"\e083"}.fa-percent:before{content:"\f295"}.fa-percentage:before{content:"\f541"}.fa-periscope:before{content:"\f3da"}.fa-person-booth:before{content:"\f756"}.fa-phabricator:before{content:"\f3db"}.fa-phoenix-framework:before{content:"\f3dc"}.fa-phoenix-squadron:before{content:"\f511"}.fa-phone:before{content:"\f095"}.fa-phone-alt:before{content:"\f879"}.fa-phone-slash:before{content:"\f3dd"}.fa-phone-square:before{content:"\f098"}.fa-phone-square-alt:before{content:"\f87b"}.fa-phone-volume:before{content:"\f2a0"}.fa-photo-video:before{content:"\f87c"}.fa-php:before{content:"\f457"}.fa-pied-piper:before{content:"\f2ae"}.fa-pied-piper-alt:before{content:"\f1a8"}.fa-pied-piper-hat:before{content:"\f4e5"}.fa-pied-piper-pp:before{content:"\f1a7"}.fa-pied-piper-square:before{content:"\e01e"}.fa-piggy-bank:before{content:"\f4d3"}.fa-pills:before{content:"\f484"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-p:before{content:"\f231"}.fa-pinterest-square:before{content:"\f0d3"}.fa-pizza-slice:before{content:"\f818"}.fa-place-of-worship:before{content:"\f67f"}.fa-plane:before{content:"\f072"}.fa-plane-arrival:before{content:"\f5af"}.fa-plane-departure:before{content:"\f5b0"}.fa-plane-slash:before{content:"\e069"}.fa-play:before{content:"\f04b"}.fa-play-circle:before{content:"\f144"}.fa-playstation:before{content:"\f3df"}.fa-plug:before{content:"\f1e6"}.fa-plus:before{content:"\f067"}.fa-plus-circle:before{content:"\f055"}.fa-plus-square:before{content:"\f0fe"}.fa-podcast:before{content:"\f2ce"}.fa-poll:before{content:"\f681"}.fa-poll-h:before{content:"\f682"}.fa-poo:before{content:"\f2fe"}.fa-poo-storm:before{content:"\f75a"}.fa-poop:before{content:"\f619"}.fa-portrait:before{content:"\f3e0"}.fa-pound-sign:before{content:"\f154"}.fa-power-off:before{content:"\f011"}.fa-pray:before{content:"\f683"}.fa-praying-hands:before{content:"\f684"}.fa-prescription:before{content:"\f5b1"}.fa-prescription-bottle:before{content:"\f485"}.fa-prescription-bottle-alt:before{content:"\f486"}.fa-print:before{content:"\f02f"}.fa-procedures:before{content:"\f487"}.fa-product-hunt:before{content:"\f288"}.fa-project-diagram:before{content:"\f542"}.fa-pump-medical:before{content:"\e06a"}.fa-pump-soap:before{content:"\e06b"}.fa-pushed:before{content:"\f3e1"}.fa-puzzle-piece:before{content:"\f12e"}.fa-python:before{content:"\f3e2"}.fa-qq:before{content:"\f1d6"}.fa-qrcode:before{content:"\f029"}.fa-question:before{content:"\f128"}.fa-question-circle:before{content:"\f059"}.fa-quidditch:before{content:"\f458"}.fa-quinscape:before{content:"\f459"}.fa-quora:before{content:"\f2c4"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-quran:before{content:"\f687"}.fa-r-project:before{content:"\f4f7"}.fa-radiation:before{content:"\f7b9"}.fa-radiation-alt:before{content:"\f7ba"}.fa-rainbow:before{content:"\f75b"}.fa-random:before{content:"\f074"}.fa-raspberry-pi:before{content:"\f7bb"}.fa-ravelry:before{content:"\f2d9"}.fa-react:before{content:"\f41b"}.fa-reacteurope:before{content:"\f75d"}.fa-readme:before{content:"\f4d5"}.fa-rebel:before{content:"\f1d0"}.fa-receipt:before{content:"\f543"}.fa-record-vinyl:before{content:"\f8d9"}.fa-recycle:before{content:"\f1b8"}.fa-red-river:before{content:"\f3e3"}.fa-reddit:before{content:"\f1a1"}.fa-reddit-alien:before{content:"\f281"}.fa-reddit-square:before{content:"\f1a2"}.fa-redhat:before{content:"\f7bc"}.fa-redo:before{content:"\f01e"}.fa-redo-alt:before{content:"\f2f9"}.fa-registered:before{content:"\f25d"}.fa-remove-format:before{content:"\f87d"}.fa-renren:before{content:"\f18b"}.fa-reply:before{content:"\f3e5"}.fa-reply-all:before{content:"\f122"}.fa-replyd:before{content:"\f3e6"}.fa-republican:before{content:"\f75e"}.fa-researchgate:before{content:"\f4f8"}.fa-resolving:before{content:"\f3e7"}.fa-restroom:before{content:"\f7bd"}.fa-retweet:before{content:"\f079"}.fa-rev:before{content:"\f5b2"}.fa-ribbon:before{content:"\f4d6"}.fa-ring:before{content:"\f70b"}.fa-road:before{content:"\f018"}.fa-robot:before{content:"\f544"}.fa-rocket:before{content:"\f135"}.fa-rocketchat:before{content:"\f3e8"}.fa-rockrms:before{content:"\f3e9"}.fa-route:before{content:"\f4d7"}.fa-rss:before{content:"\f09e"}.fa-rss-square:before{content:"\f143"}.fa-ruble-sign:before{content:"\f158"}.fa-ruler:before{content:"\f545"}.fa-ruler-combined:before{content:"\f546"}.fa-ruler-horizontal:before{content:"\f547"}.fa-ruler-vertical:before{content:"\f548"}.fa-running:before{content:"\f70c"}.fa-rupee-sign:before{content:"\f156"}.fa-rust:before{content:"\e07a"}.fa-sad-cry:before{content:"\f5b3"}.fa-sad-tear:before{content:"\f5b4"}.fa-safari:before{content:"\f267"}.fa-salesforce:before{content:"\f83b"}.fa-sass:before{content:"\f41e"}.fa-satellite:before{content:"\f7bf"}.fa-satellite-dish:before{content:"\f7c0"}.fa-save:before{content:"\f0c7"}.fa-schlix:before{content:"\f3ea"}.fa-school:before{content:"\f549"}.fa-screwdriver:before{content:"\f54a"}.fa-scribd:before{content:"\f28a"}.fa-scroll:before{content:"\f70e"}.fa-sd-card:before{content:"\f7c2"}.fa-search:before{content:"\f002"}.fa-search-dollar:before{content:"\f688"}.fa-search-location:before{content:"\f689"}.fa-search-minus:before{content:"\f010"}.fa-search-plus:before{content:"\f00e"}.fa-searchengin:before{content:"\f3eb"}.fa-seedling:before{content:"\f4d8"}.fa-sellcast:before{content:"\f2da"}.fa-sellsy:before{content:"\f213"}.fa-server:before{content:"\f233"}.fa-servicestack:before{content:"\f3ec"}.fa-shapes:before{content:"\f61f"}.fa-share:before{content:"\f064"}.fa-share-alt:before{content:"\f1e0"}.fa-share-alt-square:before{content:"\f1e1"}.fa-share-square:before{content:"\f14d"}.fa-shekel-sign:before{content:"\f20b"}.fa-shield-alt:before{content:"\f3ed"}.fa-shield-virus:before{content:"\e06c"}.fa-ship:before{content:"\f21a"}.fa-shipping-fast:before{content:"\f48b"}.fa-shirtsinbulk:before{content:"\f214"}.fa-shoe-prints:before{content:"\f54b"}.fa-shopify:before{content:"\e057"}.fa-shopping-bag:before{content:"\f290"}.fa-shopping-basket:before{content:"\f291"}.fa-shopping-cart:before{content:"\f07a"}.fa-shopware:before{content:"\f5b5"}.fa-shower:before{content:"\f2cc"}.fa-shuttle-van:before{content:"\f5b6"}.fa-sign:before{content:"\f4d9"}.fa-sign-in-alt:before{content:"\f2f6"}.fa-sign-language:before{content:"\f2a7"}.fa-sign-out-alt:before{content:"\f2f5"}.fa-signal:before{content:"\f012"}.fa-signature:before{content:"\f5b7"}.fa-sim-card:before{content:"\f7c4"}.fa-simplybuilt:before{content:"\f215"}.fa-sink:before{content:"\e06d"}.fa-sistrix:before{content:"\f3ee"}.fa-sitemap:before{content:"\f0e8"}.fa-sith:before{content:"\f512"}.fa-skating:before{content:"\f7c5"}.fa-sketch:before{content:"\f7c6"}.fa-skiing:before{content:"\f7c9"}.fa-skiing-nordic:before{content:"\f7ca"}.fa-skull:before{content:"\f54c"}.fa-skull-crossbones:before{content:"\f714"}.fa-skyatlas:before{content:"\f216"}.fa-skype:before{content:"\f17e"}.fa-slack:before{content:"\f198"}.fa-slack-hash:before{content:"\f3ef"}.fa-slash:before{content:"\f715"}.fa-sleigh:before{content:"\f7cc"}.fa-sliders-h:before{content:"\f1de"}.fa-slideshare:before{content:"\f1e7"}.fa-smile:before{content:"\f118"}.fa-smile-beam:before{content:"\f5b8"}.fa-smile-wink:before{content:"\f4da"}.fa-smog:before{content:"\f75f"}.fa-smoking:before{content:"\f48d"}.fa-smoking-ban:before{content:"\f54d"}.fa-sms:before{content:"\f7cd"}.fa-snapchat:before{content:"\f2ab"}.fa-snapchat-ghost:before{content:"\f2ac"}.fa-snapchat-square:before{content:"\f2ad"}.fa-snowboarding:before{content:"\f7ce"}.fa-snowflake:before{content:"\f2dc"}.fa-snowman:before{content:"\f7d0"}.fa-snowplow:before{content:"\f7d2"}.fa-soap:before{content:"\e06e"}.fa-socks:before{content:"\f696"}.fa-solar-panel:before{content:"\f5ba"}.fa-sort:before{content:"\f0dc"}.fa-sort-alpha-down:before{content:"\f15d"}.fa-sort-alpha-down-alt:before{content:"\f881"}.fa-sort-alpha-up:before{content:"\f15e"}.fa-sort-alpha-up-alt:before{content:"\f882"}.fa-sort-amount-down:before{content:"\f160"}.fa-sort-amount-down-alt:before{content:"\f884"}.fa-sort-amount-up:before{content:"\f161"}.fa-sort-amount-up-alt:before{content:"\f885"}.fa-sort-down:before{content:"\f0dd"}.fa-sort-numeric-down:before{content:"\f162"}.fa-sort-numeric-down-alt:before{content:"\f886"}.fa-sort-numeric-up:before{content:"\f163"}.fa-sort-numeric-up-alt:before{content:"\f887"}.fa-sort-up:before{content:"\f0de"}.fa-soundcloud:before{content:"\f1be"}.fa-sourcetree:before{content:"\f7d3"}.fa-spa:before{content:"\f5bb"}.fa-space-shuttle:before{content:"\f197"}.fa-speakap:before{content:"\f3f3"}.fa-speaker-deck:before{content:"\f83c"}.fa-spell-check:before{content:"\f891"}.fa-spider:before{content:"\f717"}.fa-spinner:before{content:"\f110"}.fa-splotch:before{content:"\f5bc"}.fa-spotify:before{content:"\f1bc"}.fa-spray-can:before{content:"\f5bd"}.fa-square:before{content:"\f0c8"}.fa-square-full:before{content:"\f45c"}.fa-square-root-alt:before{content:"\f698"}.fa-squarespace:before{content:"\f5be"}.fa-stack-exchange:before{content:"\f18d"}.fa-stack-overflow:before{content:"\f16c"}.fa-stackpath:before{content:"\f842"}.fa-stamp:before{content:"\f5bf"}.fa-star:before{content:"\f005"}.fa-star-and-crescent:before{content:"\f699"}.fa-star-half:before{content:"\f089"}.fa-star-half-alt:before{content:"\f5c0"}.fa-star-of-david:before{content:"\f69a"}.fa-star-of-life:before{content:"\f621"}.fa-staylinked:before{content:"\f3f5"}.fa-steam:before{content:"\f1b6"}.fa-steam-square:before{content:"\f1b7"}.fa-steam-symbol:before{content:"\f3f6"}.fa-step-backward:before{content:"\f048"}.fa-step-forward:before{content:"\f051"}.fa-stethoscope:before{content:"\f0f1"}.fa-sticker-mule:before{content:"\f3f7"}.fa-sticky-note:before{content:"\f249"}.fa-stop:before{content:"\f04d"}.fa-stop-circle:before{content:"\f28d"}.fa-stopwatch:before{content:"\f2f2"}.fa-stopwatch-20:before{content:"\e06f"}.fa-store:before{content:"\f54e"}.fa-store-alt:before{content:"\f54f"}.fa-store-alt-slash:before{content:"\e070"}.fa-store-slash:before{content:"\e071"}.fa-strava:before{content:"\f428"}.fa-stream:before{content:"\f550"}.fa-street-view:before{content:"\f21d"}.fa-strikethrough:before{content:"\f0cc"}.fa-stripe:before{content:"\f429"}.fa-stripe-s:before{content:"\f42a"}.fa-stroopwafel:before{content:"\f551"}.fa-studiovinari:before{content:"\f3f8"}.fa-stumbleupon:before{content:"\f1a4"}.fa-stumbleupon-circle:before{content:"\f1a3"}.fa-subscript:before{content:"\f12c"}.fa-subway:before{content:"\f239"}.fa-suitcase:before{content:"\f0f2"}.fa-suitcase-rolling:before{content:"\f5c1"}.fa-sun:before{content:"\f185"}.fa-superpowers:before{content:"\f2dd"}.fa-superscript:before{content:"\f12b"}.fa-supple:before{content:"\f3f9"}.fa-surprise:before{content:"\f5c2"}.fa-suse:before{content:"\f7d6"}.fa-swatchbook:before{content:"\f5c3"}.fa-swift:before{content:"\f8e1"}.fa-swimmer:before{content:"\f5c4"}.fa-swimming-pool:before{content:"\f5c5"}.fa-symfony:before{content:"\f83d"}.fa-synagogue:before{content:"\f69b"}.fa-sync:before{content:"\f021"}.fa-sync-alt:before{content:"\f2f1"}.fa-syringe:before{content:"\f48e"}.fa-table:before{content:"\f0ce"}.fa-table-tennis:before{content:"\f45d"}.fa-tablet:before{content:"\f10a"}.fa-tablet-alt:before{content:"\f3fa"}.fa-tablets:before{content:"\f490"}.fa-tachometer-alt:before{content:"\f3fd"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-tape:before{content:"\f4db"}.fa-tasks:before{content:"\f0ae"}.fa-taxi:before{content:"\f1ba"}.fa-teamspeak:before{content:"\f4f9"}.fa-teeth:before{content:"\f62e"}.fa-teeth-open:before{content:"\f62f"}.fa-telegram:before{content:"\f2c6"}.fa-telegram-plane:before{content:"\f3fe"}.fa-temperature-high:before{content:"\f769"}.fa-temperature-low:before{content:"\f76b"}.fa-tencent-weibo:before{content:"\f1d5"}.fa-tenge:before{content:"\f7d7"}.fa-terminal:before{content:"\f120"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-th:before{content:"\f00a"}.fa-th-large:before{content:"\f009"}.fa-th-list:before{content:"\f00b"}.fa-the-red-yeti:before{content:"\f69d"}.fa-theater-masks:before{content:"\f630"}.fa-themeco:before{content:"\f5c6"}.fa-themeisle:before{content:"\f2b2"}.fa-thermometer:before{content:"\f491"}.fa-thermometer-empty:before{content:"\f2cb"}.fa-thermometer-full:before{content:"\f2c7"}.fa-thermometer-half:before{content:"\f2c9"}.fa-thermometer-quarter:before{content:"\f2ca"}.fa-thermometer-three-quarters:before{content:"\f2c8"}.fa-think-peaks:before{content:"\f731"}.fa-thumbs-down:before{content:"\f165"}.fa-thumbs-up:before{content:"\f164"}.fa-thumbtack:before{content:"\f08d"}.fa-ticket-alt:before{content:"\f3ff"}.fa-tiktok:before{content:"\e07b"}.fa-times:before{content:"\f00d"}.fa-times-circle:before{content:"\f057"}.fa-tint:before{content:"\f043"}.fa-tint-slash:before{content:"\f5c7"}.fa-tired:before{content:"\f5c8"}.fa-toggle-off:before{content:"\f204"}.fa-toggle-on:before{content:"\f205"}.fa-toilet:before{content:"\f7d8"}.fa-toilet-paper:before{content:"\f71e"}.fa-toilet-paper-slash:before{content:"\e072"}.fa-toolbox:before{content:"\f552"}.fa-tools:before{content:"\f7d9"}.fa-tooth:before{content:"\f5c9"}.fa-torah:before{content:"\f6a0"}.fa-torii-gate:before{content:"\f6a1"}.fa-tractor:before{content:"\f722"}.fa-trade-federation:before{content:"\f513"}.fa-trademark:before{content:"\f25c"}.fa-traffic-light:before{content:"\f637"}.fa-trailer:before{content:"\e041"}.fa-train:before{content:"\f238"}.fa-tram:before{content:"\f7da"}.fa-transgender:before{content:"\f224"}.fa-transgender-alt:before{content:"\f225"}.fa-trash:before{content:"\f1f8"}.fa-trash-alt:before{content:"\f2ed"}.fa-trash-restore:before{content:"\f829"}.fa-trash-restore-alt:before{content:"\f82a"}.fa-tree:before{content:"\f1bb"}.fa-trello:before{content:"\f181"}.fa-tripadvisor:before{content:"\f262"}.fa-trophy:before{content:"\f091"}.fa-truck:before{content:"\f0d1"}.fa-truck-loading:before{content:"\f4de"}.fa-truck-monster:before{content:"\f63b"}.fa-truck-moving:before{content:"\f4df"}.fa-truck-pickup:before{content:"\f63c"}.fa-tshirt:before{content:"\f553"}.fa-tty:before{content:"\f1e4"}.fa-tumblr:before{content:"\f173"}.fa-tumblr-square:before{content:"\f174"}.fa-tv:before{content:"\f26c"}.fa-twitch:before{content:"\f1e8"}.fa-twitter:before{content:"\f099"}.fa-twitter-square:before{content:"\f081"}.fa-typo3:before{content:"\f42b"}.fa-uber:before{content:"\f402"}.fa-ubuntu:before{content:"\f7df"}.fa-uikit:before{content:"\f403"}.fa-umbraco:before{content:"\f8e8"}.fa-umbrella:before{content:"\f0e9"}.fa-umbrella-beach:before{content:"\f5ca"}.fa-uncharted:before{content:"\e084"}.fa-underline:before{content:"\f0cd"}.fa-undo:before{content:"\f0e2"}.fa-undo-alt:before{content:"\f2ea"}.fa-uniregistry:before{content:"\f404"}.fa-unity:before{content:"\e049"}.fa-universal-access:before{content:"\f29a"}.fa-university:before{content:"\f19c"}.fa-unlink:before{content:"\f127"}.fa-unlock:before{content:"\f09c"}.fa-unlock-alt:before{content:"\f13e"}.fa-unsplash:before{content:"\e07c"}.fa-untappd:before{content:"\f405"}.fa-upload:before{content:"\f093"}.fa-ups:before{content:"\f7e0"}.fa-usb:before{content:"\f287"}.fa-user:before{content:"\f007"}.fa-user-alt:before{content:"\f406"}.fa-user-alt-slash:before{content:"\f4fa"}.fa-user-astronaut:before{content:"\f4fb"}.fa-user-check:before{content:"\f4fc"}.fa-user-circle:before{content:"\f2bd"}.fa-user-clock:before{content:"\f4fd"}.fa-user-cog:before{content:"\f4fe"}.fa-user-edit:before{content:"\f4ff"}.fa-user-friends:before{content:"\f500"}.fa-user-graduate:before{content:"\f501"}.fa-user-injured:before{content:"\f728"}.fa-user-lock:before{content:"\f502"}.fa-user-md:before{content:"\f0f0"}.fa-user-minus:before{content:"\f503"}.fa-user-ninja:before{content:"\f504"}.fa-user-nurse:before{content:"\f82f"}.fa-user-plus:before{content:"\f234"}.fa-user-secret:before{content:"\f21b"}.fa-user-shield:before{content:"\f505"}.fa-user-slash:before{content:"\f506"}.fa-user-tag:before{content:"\f507"}.fa-user-tie:before{content:"\f508"}.fa-user-times:before{content:"\f235"}.fa-users:before{content:"\f0c0"}.fa-users-cog:before{content:"\f509"}.fa-users-slash:before{content:"\e073"}.fa-usps:before{content:"\f7e1"}.fa-ussunnah:before{content:"\f407"}.fa-utensil-spoon:before{content:"\f2e5"}.fa-utensils:before{content:"\f2e7"}.fa-vaadin:before{content:"\f408"}.fa-vector-square:before{content:"\f5cb"}.fa-venus:before{content:"\f221"}.fa-venus-double:before{content:"\f226"}.fa-venus-mars:before{content:"\f228"}.fa-vest:before{content:"\e085"}.fa-vest-patches:before{content:"\e086"}.fa-viacoin:before{content:"\f237"}.fa-viadeo:before{content:"\f2a9"}.fa-viadeo-square:before{content:"\f2aa"}.fa-vial:before{content:"\f492"}.fa-vials:before{content:"\f493"}.fa-viber:before{content:"\f409"}.fa-video:before{content:"\f03d"}.fa-video-slash:before{content:"\f4e2"}.fa-vihara:before{content:"\f6a7"}.fa-vimeo:before{content:"\f40a"}.fa-vimeo-square:before{content:"\f194"}.fa-vimeo-v:before{content:"\f27d"}.fa-vine:before{content:"\f1ca"}.fa-virus:before{content:"\e074"}.fa-virus-slash:before{content:"\e075"}.fa-viruses:before{content:"\e076"}.fa-vk:before{content:"\f189"}.fa-vnv:before{content:"\f40b"}.fa-voicemail:before{content:"\f897"}.fa-volleyball-ball:before{content:"\f45f"}.fa-volume-down:before{content:"\f027"}.fa-volume-mute:before{content:"\f6a9"}.fa-volume-off:before{content:"\f026"}.fa-volume-up:before{content:"\f028"}.fa-vote-yea:before{content:"\f772"}.fa-vr-cardboard:before{content:"\f729"}.fa-vuejs:before{content:"\f41f"}.fa-walking:before{content:"\f554"}.fa-wallet:before{content:"\f555"}.fa-warehouse:before{content:"\f494"}.fa-watchman-monitoring:before{content:"\e087"}.fa-water:before{content:"\f773"}.fa-wave-square:before{content:"\f83e"}.fa-waze:before{content:"\f83f"}.fa-weebly:before{content:"\f5cc"}.fa-weibo:before{content:"\f18a"}.fa-weight:before{content:"\f496"}.fa-weight-hanging:before{content:"\f5cd"}.fa-weixin:before{content:"\f1d7"}.fa-whatsapp:before{content:"\f232"}.fa-whatsapp-square:before{content:"\f40c"}.fa-wheelchair:before{content:"\f193"}.fa-whmcs:before{content:"\f40d"}.fa-wifi:before{content:"\f1eb"}.fa-wikipedia-w:before{content:"\f266"}.fa-wind:before{content:"\f72e"}.fa-window-close:before{content:"\f410"}.fa-window-maximize:before{content:"\f2d0"}.fa-window-minimize:before{content:"\f2d1"}.fa-window-restore:before{content:"\f2d2"}.fa-windows:before{content:"\f17a"}.fa-wine-bottle:before{content:"\f72f"}.fa-wine-glass:before{content:"\f4e3"}.fa-wine-glass-alt:before{content:"\f5ce"}.fa-wix:before{content:"\f5cf"}.fa-wizards-of-the-coast:before{content:"\f730"}.fa-wodu:before{content:"\e088"}.fa-wolf-pack-battalion:before{content:"\f514"}.fa-won-sign:before{content:"\f159"}.fa-wordpress:before{content:"\f19a"}.fa-wordpress-simple:before{content:"\f411"}.fa-wpbeginner:before{content:"\f297"}.fa-wpexplorer:before{content:"\f2de"}.fa-wpforms:before{content:"\f298"}.fa-wpressr:before{content:"\f3e4"}.fa-wrench:before{content:"\f0ad"}.fa-x-ray:before{content:"\f497"}.fa-xbox:before{content:"\f412"}.fa-xing:before{content:"\f168"}.fa-xing-square:before{content:"\f169"}.fa-y-combinator:before{content:"\f23b"}.fa-yahoo:before{content:"\f19e"}.fa-yammer:before{content:"\f840"}.fa-yandex:before{content:"\f413"}.fa-yandex-international:before{content:"\f414"}.fa-yarn:before{content:"\f7e3"}.fa-yelp:before{content:"\f1e9"}.fa-yen-sign:before{content:"\f157"}.fa-yin-yang:before{content:"\f6ad"}.fa-yoast:before{content:"\f2b1"}.fa-youtube:before{content:"\f167"}.fa-youtube-square:before{content:"\f431"}.fa-zhihu:before{content:"\f63f"}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg")}@font-face{font-family:"Font Awesome 5 Pro";font-style:normal;font-weight:400;font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-regular-400.svg#fontawesome) format("svg")}.fab,.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")}@font-face{font-family:"Font Awesome 5 Pro";font-style:normal;font-weight:900;font-display:block;src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot);src:url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff2) format("woff2"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.woff) format("woff"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.ttf) format("truetype"),url(https://ka-f.fontawesome.com/releases/v5.15.3/webfonts/free-fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}</style>
-  <meta name="description" content="Modz Team Presents...">
-  <meta property="og:title" content="Modz Team Repo">
-  <meta property="og:description" content="Modz Team Presents...">
-  <meta property="og:image" content="https://dollazyt.github.io/DollazYT/assets/CydiaIcon2.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Modz Team Repo">
-  <meta name="twitter:description" content="Modz Team Presents... ">
-  <meta name="twitter:image" content="https://dollazyt.github.io/DollazYT/assets/CydiaIcon2.png">
-  <meta name="theme-color" content="#677E94">
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-	 <style>
-	 @font-face {
-	font-family: Modish;
-	font-display: block;
-	src: url(./fonts/NewPressEroded.otf);
-}
-</style>
+    <meta name="apple-mobile-web-app-title"
+          content="Twickd">
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/storage/static/icon.svg">
+    <link rel="mask-icon"
+          href="/storage/static/icon.svg"
+          color="#000000">
+
+    <!-- Meta -->
+      <meta name="csrf-token"
+          content="OgWWGgxLaI9yUFfBe8HHO46HcarLPxKJaVQS5VOZ">
+      <meta property="og:url" content="https://repo.twickd.com">
+      <meta property="og:site_name" content="Twickd">
+      <meta property="og:title" content="Twickd" />
+      <meta property="og:description" content="Think. Create. Distribute" />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@TwickdRepo">
+    
+
+    <title>Twickd</title>
+
+    <!-- Scripts -->
+    <script src="https://repo.twickd.com/js/app.js"
+            defer></script>
+
+    <!-- Styles -->
+    <link href="https://repo.twickd.com/css/app.css"
+          rel="stylesheet">
 </head>
 
 <body>
-  <div class="body" id="bodyDiv">
+    <div id="app"
+         class="page_repository.index">
+                <div id="navigation" v-cloak>
+            <div class="hidden lg:flex">
+    <desktop-navigation relative="">
+        <div class="container mx-auto flex items-center">
+            <a href="https://twickd.com"
+            class="flex items-center space-x-2 text-white scroll:text-twickd-500 transition-colors">
+                <svg class="s-8"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 86 86">
+                    <path d="M12.64 2.228a6 6 0 018.486 0L83.508 64.61a6 6 0 010 8.486L73.096 83.508a6 6 0 01-8.486 0L2.228 21.126a6 6 0 010-8.486L12.64 2.228z" />
+                    <path d="M53.744 42.405a6 6 0 010 8.485L21.126 83.508a6 6 0 01-8.486 0L2.228 73.096a6 6 0 010-8.486l32.618-32.618a6 6 0 018.485 0l10.413 10.413zM78.302 26.332c-5.219 5.219-13.68 5.219-18.898 0-5.219-5.219-5.219-13.68 0-18.898 5.218-5.219 13.68-5.219 18.898 0s5.218 13.68 0 18.898z" />
+                </svg>
+                <span class="text-2xl font-bold">Twickd</span>
+            </a>
+            <div class="flex-1">
+                <nav role="navigation" class="flex justify-center space-x-4 relative w-full">
+                    <navigation-dropdown>
+                        <template v-slot:button>
+                            Repository
+                        </template>
+                        <div class="grid grid-cols-2 gap-8 text-gray-700 dark:text-gray-200">
+                            
+                            <div>
+                                <div class="grid grid-flow-row gap-6">
+                                    <a href="https://repo.twickd.com" class="flex space-x-2 group">
+                                        <svg class="s-8 text-twickd-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                                        <div class="flex-1">
+                                            <p class="text-lg font-semibold group-hover:text-twickd-100 transition-colors">Tweaks</p>
+                                            <p class="text-sm">Add powerful and useful features to your devices</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://repo.twickd.com" class="flex space-x-2 group">
+                                        <svg class="s-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <div class="flex-1">
+                                            <p class="text-lg font-semibold group-hover:text-indigo-500 transition-colors">Themes</p>
+                                            <p class="text-sm">Make your device look and feel the way you want</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="grid grid-flow-row gap-6">
+                                <div>
+                                    <p class="text-lg font-semibold">Featured</p>
+                                    <p class="text-sm">Currated list of package to satisfy your freedom needs.</p>
+                                </div>
+                                                                                                    <a href="https://repo.twickd.com/get/com.twickd.the-lucifer.dynawall" class="w-full flex items-center space-x-4 relative z-10 truncate">
+                                        <div>
+                                            <lazy-image class="s-10 rounded-lg"
+                                                        v-lazyload
+                                                        src="https://twickd.com/images/com.twickd.the-lucifer.dynawall/icon.jpeg?size=medium"
+                                                        placeholder="https://twickd.com/images/com.twickd.the-lucifer.dynawall/icon.jpeg?size=mini" />
+                                        </div>
+                                        <div class="flex-1 truncate">
+                                            <h3 class="text-lg truncate font-bold">DynaWall</h3>
+                                            <p class="text-xs truncate">Published by <strong>The_Lucifer</strong></p>
+                                        </div>
+                                    </a>
+                                                                        <a href="https://repo.twickd.com/get/com.twickd.dave-van-wijk.ainsworth" class="w-full flex items-center space-x-4 relative z-10 truncate">
+                                        <div>
+                                            <lazy-image class="s-10 rounded-lg"
+                                                        v-lazyload
+                                                        src="https://twickd.com/images/com.twickd.dave-van-wijk.ainsworth/icon.jpeg?size=medium"
+                                                        placeholder="https://twickd.com/images/com.twickd.dave-van-wijk.ainsworth/icon.jpeg?size=mini" />
+                                        </div>
+                                        <div class="flex-1 truncate">
+                                            <h3 class="text-lg truncate font-bold">Ainsworth</h3>
+                                            <p class="text-xs truncate">Published by <strong>Ainsworth</strong></p>
+                                        </div>
+                                    </a>
+                                                                </div>
+                        </div>
+                    </navigation-dropdown>
+                    <a class="font-semibold hover:opacity-75 transition-opacity p-2" href="https://repo.twickd.com">Community</a>
+                    <a class="font-semibold hover:opacity-75 transition-opacity p-2" href="https://docs.twickd.com/guides">Guides</a>
+                </nav>
+            </div>
+            <div class="flex items-center">
+                                    <div class="space-x-2 flex items-center justify-end py-3">
+                        <a href="https://twickd.com/login"
+                        class="button bg-white text-white scroll:bg-twickd-500 bg-opacity-15 scroll:bg-opacity-15 scroll:text-twickd-500 py-2 px-4">Sign In</a>
+                        <a href="https://twickd.com/register"
+                        class="button text-white bg-twickd-500 icon py-2 px-4">
+                            Sign Up                        </a>
+                    </div>
+                                </div>
+        </div>
+    </desktop-navigation>
+</div>
+<div class="flex lg:hidden mt-16 lg:mt-0">
+    <mobile-navigation>
+        <div class="flex-1 flex items-center">
+            <a href="https://twickd.com">
+                <svg class="s-8 text-twickd-500"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 86 86">
+                    <path d="M12.64 2.228a6 6 0 018.486 0L83.508 64.61a6 6 0 010 8.486L73.096 83.508a6 6 0 01-8.486 0L2.228 21.126a6 6 0 010-8.486L12.64 2.228z" />
+                    <path d="M53.744 42.405a6 6 0 010 8.485L21.126 83.508a6 6 0 01-8.486 0L2.228 73.096a6 6 0 010-8.486l32.618-32.618a6 6 0 018.485 0l10.413 10.413zM78.302 26.332c-5.219 5.219-13.68 5.219-18.898 0-5.219-5.219-5.219-13.68 0-18.898 5.218-5.219 13.68-5.219 18.898 0s5.218 13.68 0 18.898z" />
+                </svg>
+            </a>
+                    </div>
+        <template v-slot:menu>
+            <div class="px-6 container mx-auto flex flex-col">
+                <div class="flex flex-col space-y-9 flex-1 mt-2">
+                                        <div class="grid grid-cols-2 gap-4">
+                        <a href="https://twickd.com/login" class="button bg-twickd-500 bg-opacity-15 text-twickd-500">Sign In</a>
+                        <a href="https://twickd.com/register" class="button bg-twickd-500 text-white">Sign Up</a>
+                    </div>
+                                        <ul class="text-lg space-y-3">
+                        <li class="text-xl font-semibold mb-4">Resources</li>
+                        <li><a href="https://repo.twickd.com">Repository</a></li>
+                        <li><a href="https://repo.twickd.com">Community</a></li>
+                        <li><a href="https://docs.twickd.com/">Documentation</a></li>
+                        <li><a href="https://dashboard.twickd.com">Dashboard</a></li>
+                        <li><a href="https://twickd.com/support">Support</a></li>
+                    </ul>
+                                    </div>
+            </div>
+        </template>
+    </mobile-navigation>
+</div>
 
-    <div class="row">
-      <div class="col-12 text-center">
-        <img style="width:100px;height:100x;border-radius:20px" src="./assets/CydiaIcon2.png"><br>
-        <h1 class="header" style="font-family:Modish">M O D Z &nbsp; T E A M &nbsp; R E P O</h1>
-      </div>
+<div class="w-full hidden navigation__bar z-20 ">
+    <div class="container mx-auto px-8 space-x-4 xl:px-0 flex relative items-center">
+        <a href="https://twickd.com"
+           class="flex items-center space-x-2">
+            <svg class="s-8 text-white"
+                 fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 86 86">
+                <path d="M12.64 2.228a6 6 0 018.486 0L83.508 64.61a6 6 0 010 8.486L73.096 83.508a6 6 0 01-8.486 0L2.228 21.126a6 6 0 010-8.486L12.64 2.228z" />
+                <path d="M53.744 42.405a6 6 0 010 8.485L21.126 83.508a6 6 0 01-8.486 0L2.228 73.096a6 6 0 010-8.486l32.618-32.618a6 6 0 018.485 0l10.413 10.413zM78.302 26.332c-5.219 5.219-13.68 5.219-18.898 0-5.219-5.219-5.219-13.68 0-18.898 5.218-5.219 13.68-5.219 18.898 0s5.218 13.68 0 18.898z" />
+            </svg>
+            <span class="text-2xl font-bold text-white">Twickd</span>
+        </a>
+        <div class="flex w-full py-3">
+            <nav role="navigation"
+                 class="flex relative flex-1 space-x-2 z-20">
+                <desktop-menu>
+                    <template v-slot:button>
+                        <div class="px-4 py-2 button icon to-right text-white cursor-default hover:text-opacity-75 bg-transparent">
+                            <span>Repository</span>
+                            <svg fill="none"
+                                 class="s-4"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                                <path d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </template>
 
+                    <template v-slot:content>
+                                                <div class="grid grid-cols-2 w-full gap-4">
+                            <div>
+                                <div class="mb-6">
+                                    <h3>Categories</h3>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="grid grid-flow-row gap-4">
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0  hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Tweaks</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0  hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Themes</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0  hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Widgets</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0  hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Addons</span>
+                                            </a>
+                                        </div>
+                                                                            </div>
+
+                                    <div class="grid grid-flow-row gap-4">
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0 hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Utilities</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0 hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>System</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0 hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Packaging</span>
+                                            </a>
+                                        </div>
+                                                                                <div class="inline-flex">
+                                            <a href="https://repo.twickd.com"
+                                               class="font-semibold lg:text-lg button icon to-left p-0 hover:text-twickd-500">
+                                                <svg fill="none"
+                                                     class="s-5 text-gray-500"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     stroke-width="2"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                                                </svg>
+                                                <span>Development</span>
+                                            </a>
+                                        </div>
+                                                                            </div>
+                                </div>
+
+                            </div>
+
+                            <div class="grid grid-flow-row gap-4">
+                                                                <div class="bg-white dark:bg-gray-900 p-4 w-full rounded-xl flex space-x-4 relative z-10 shadow-large dark:shadow-none">
+                                    <div class="flex items-start">
+                                        <lazy-image class="w-12 h-12 rounded-lg"
+                                                    v-lazyload
+                                                    src="https://twickd.com/images/com.twickd.the-lucifer.dynawall/icon.jpeg?size=medium"
+                                                    placeholder="https://twickd.com/images/com.twickd.the-lucifer.dynawall/icon.jpeg?size=mini" />
+                                    </div>
+                                    <div class="flex-1 flex flex-col">
+                                        <h3 class="text-xl font-bold mb-1">DynaWall</h3>
+                                        <p class="mt-4 text-sm">Published by <strong class="text-gray-900 dark:text-white">The_Lucifer</strong></p>
+                                    </div>
+                                    <div class="hidden md:flex items-center justify-end">
+                                        <a href="https://repo.twickd.com/get/com.twickd.the-lucifer.dynawall"
+                                           class="button bg-gray-700 hover:bg-gray-900 text-sm text-white uppercase tracking-wide leading-5 px-4 py-2">GET</a>
+                                    </div>
+                                </div>
+                                                                <div class="bg-white dark:bg-gray-900 p-4 w-full rounded-xl flex space-x-4 relative z-10 shadow-large dark:shadow-none">
+                                    <div class="flex items-start">
+                                        <lazy-image class="w-12 h-12 rounded-lg"
+                                                    v-lazyload
+                                                    src="https://twickd.com/images/com.twickd.dave-van-wijk.ainsworth/icon.jpeg?size=medium"
+                                                    placeholder="https://twickd.com/images/com.twickd.dave-van-wijk.ainsworth/icon.jpeg?size=mini" />
+                                    </div>
+                                    <div class="flex-1 flex flex-col">
+                                        <h3 class="text-xl font-bold mb-1">Ainsworth</h3>
+                                        <p class="mt-4 text-sm">Published by <strong class="text-gray-900 dark:text-white">Ainsworth</strong></p>
+                                    </div>
+                                    <div class="hidden md:flex items-center justify-end">
+                                        <a href="https://repo.twickd.com/get/com.twickd.dave-van-wijk.ainsworth"
+                                           class="button bg-gray-700 hover:bg-gray-900 text-sm text-white uppercase tracking-wide leading-5 px-4 py-2">GET</a>
+                                    </div>
+                                </div>
+                                                            </div>
+
+                        </div>
+                    </template>
+                    <template v-slot:footer>
+                        <div class="p-8 flex justify-end">
+                            <a href="https://repo.twickd.com"
+                               class="button icon to-right relative hover:text-twickd-500 text-gray-700 p-0">
+                                <span>Explore the repository</span>
+                                <svg fill="none"
+                                     class="s-4"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="3"
+                                     viewBox="0 0 24 24"
+                                     stroke="currentColor">
+                                    <path d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </template>
+                </desktop-menu>
+                <a href="https://repo.twickd.com"
+                   class="px-4 py-2 button hover:text-opacity-75 bg-transparent text-white">Community</a>
+            </nav>
+            <div class="flex items-center">
+                                <a href="https://twickd.com/login"
+                   class="button border-2 border-white text-white hover:bg-white hover:text-twickd-500 mr-2 py-2 px-4">Sign In</a>
+                <a href="https://twickd.com/register"
+                   class="button text-white border-2 border-twickd-500 bg-twickd-500 icon py-2 px-4">
+                    Sign Up <i data-feather="user"></i>
+                </a>
+                            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-12 text-center">
-        <p>If you find youself appreciating these tweaks, please consider supporting me on<a href="https://youtube.com/c/DollazYT" style="color: #2ECC71">
-            YouTube <i class="fa fa-youtube-square" aria-hidden="true"></i></a><br>ONLY SILEO WORKS ON THIS REPO, DO NOT ATTEMPT TO ADD TO CYDIA</p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BBSCydia%40gmail%2ecom&amp;lc=QA&amp;item_name=WorksByBBS%20Repo%20Donation&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest">
-      </a></div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BBSCydia%40gmail%2ecom&amp;lc=QA&amp;item_name=WorksByBBS%20Repo%20Donation&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest">
-    </a></div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BBSCydia%40gmail%2ecom&amp;lc=QA&amp;item_name=WorksByBBS%20Repo%20Donation&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest">
+</div>
 
-    <center>
-      <div class="col-md-3 col-6 text-center">
-        <a class="pkg-button sileo" href="sileo://source/https://modzteam.github.io/ModzTeamRepo/">Sileo</a>
-      </div>
-    </div>
-<!--jeejebjrkbcvrjkvbcjjvkbjk4b4kjvbrjkvbrvkjrbvkjrbvjkrvbrkjbrjkvbr4vkj4rbvkjr
-    <h2 class="header"><i class="fas fa-shapes" aria-hidden="true"></i></h2>
-    <div id="filterList">
-      <div class="row text-center">
-        <div class="col-12">
-          <label id="pkgSelectLabel" for="pkgSelect">Filter Packages: </label>
-          <select id="pkgSelect" name="pkgSelect" onchange="filterPkg()">
-            <option value="all" onclick="filterPkg(this.id)" selected="">All</option>
-            <option value="Mod Menu" onclick="filterPkg(this.id)">Mod Menu</option>
-            <option value="Tool" onclick="filterPkg(this.id)">Tool</option>
-            <option value="Theme" onclick="filterPkg(this.id)">Theme</option>
-            <option value="Tweak" onclick="filterPkg(this.id)">Tweak</option>
+
+        </div>
+                <div id="content" class="">
+                                    <div class="w-full bg-gradient-to-tr from-twickd-900 to-gray-900 flex pt-16 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+
+        <div class="relative w-full h-full" style="filter: blur(128px)">
+            <svg class="absolute inset-x-0 bottom-0 -ml-1/2 md:ml-0 h-full" viewBox="0 0 1551 767" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M286.5 1.99981C185.021 -16.47 35.3625 146.352 -9 241.5L-20 792.397C334.207 806.156 900.846 869.289 907.5 740C915.818 578.388 675.462 586.843 519.5 484C363.538 381.156 413.349 25.0871 286.5 1.99981Z" fill="#F83F37"/>
+                <path d="M234 134C148.306 113.512 29.462 305.215 -8 410.762V944.163C291.11 959.426 1027.38 883.419 1033 740C1040.02 560.726 639.702 628.083 508 514C376.298 399.917 341.118 159.61 234 134Z" fill="#EB1741"/>
+                <ellipse cx="1145" cy="755.5" rx="406" ry="183.5" fill="#EB1741"/>
+                <ellipse cx="192.5" cy="826" rx="420" ry="420" fill="#D31741"/>
+                <ellipse cx="1067" cy="769" rx="380" ry="177" fill="#D31741"/>
+            </svg>
+        </div>
             
-      
+            
+    </div>
 
-          </select>
+    <repository-index-featured :pkgs="[{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.the-lucifer.dynawall&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.the-lucifer.dynawall\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:112,&quot;name&quot;:&quot;DynaWall&quot;,&quot;price&quot;:279,&quot;identifier&quot;:&quot;com.twickd.the-lucifer.dynawall&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:280,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:37&quot;,&quot;created_at&quot;:&quot;2020-02-27T14:59:00.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:56.000000Z&quot;,&quot;business_name&quot;:&quot;The_Lucifer&quot;,&quot;description&quot;:&quot;DynaWall is an amazing wallpaper app with a plethora of features. It strives to be a one stop shop for everything related to wallpapers.\r\n\r\n## Features\r\n\r\n* Create **Dynamic Wallpapers** from your Photo Library with a beautiful UI\r\n\r\n* Create **Stock-like Live Wallpapers** with videos from your Photo Library. *(NEW in v2)*\r\n\r\n* **Create Gradient wallpapers**-  When you choose an image, you get a cool button that creates a beautiful looking gradient from the image and applies it to the other appearance. *(NEW in v3.0)*\r\n\r\n* **Command line Mode**: Provide a path to the Image files for light and dark and call `dynawallcli` and it\u2019ll do the rest and set wallpapers for you. Just call `dynawallcli --help` for a nice overview of what you can do. *(NEW in v3.0)*\r\n\r\n* **Smart Crop**: Device Specific crop to create and set perfect wallpapers every single time. This uses a painstakingly handmade database for every single device on iOS 13 that makes Dynawall smarter than ever before. *(NEW in v3.0)*\r\n\r\n* **Image Filters** support. If you&#039;re looking for a monochrome look, head to settings and tap the Black and White filter option. Every image will now automatically be recolored to black and white. *(NEW in v2.1)*\r\n\r\n* **Full iPad support: **DynaWall works amazingly on iPads now with fullscreen, slide-over and split-view support. *(NEW in v2.1)*\r\n\r\n(Note: iPads do not support live wallpapers out of the box. r\/Jailbreak has guides to enable Live Wallpaper support)\r\n\r\n* **Copy and reverse images** button added: *(NEW in v2.1)* \r\n\t\t* If you have one image selected, a new copy button will appear, tap on it to copy the image to the other free slot. This can be used to make still wallpapers.\r\n    * If you have both the images selected, the copy button will be a reverse button instead. You can swap the positions of the images.\r\n\r\n* **Native iOS** design\r\n\r\n* **Magic Fill Feature:** Load images from multiple online sources:\r\n\r\n* Load Images from **Online Sources**:\r\n\t* **Unsplash**:\r\n\t\t* Light Images are pulled from Nature, Mountains and Sea categories *(Completely configurable, NEW in V2)*\r\n\t\t* Dark Images are pulled from City and Night *(Completely configurable, NEW in V2)*\r\n\t* Images from **Subreddits**. (Yes, even memes.) *(NEW in v2)*\r\n\t* Load **Bing&#039;s Daily wallpapers**\r\n\r\n* **Configure online sources**, and determine where to load images from. *(NEW in v2)*\r\n\r\n* Don&#039;t like an online image? **Mix and Match online images** with images from your Library!\r\n\r\n* **Image Pinning:** Like one image but hate the other? Pin one image and cycle the other! Even change image sources from settings and choose images while having an image pinned! All with a beautiful design you expect from iOS. *(NEW in v1.1)*\r\n\r\n## Bugs\r\n\r\nReport via the many ways to do so from within DynaWall&#039;s Settings, or use Twickd Support.\r\n\r\n## Requirements\r\n\r\nDepends on Wallpaper Loader by Skittyblock. Please install it too :)\r\n\r\n## Refund Policy\r\n\r\nA refund will be issued if the tweak has a major reproducible bug that can\u2018t be fixed within 7 days. If the issue is not clear you will be asked to provide more details (Crashlog, tweak list for example). Change of mind refunds are granted if the purchase is within 24 hours and a valid reason is provided. Refund requests can be rejected at my own discretion. Refund requests because \&quot;it&#039;s not what I expected\&quot; will be rejected, the tweaks depiction and it&#039;s images provide a good description of what to expect. Refund requests may be closed within 7 days of no reply.\r\n \r\nReplying to a refund request can take up to 7 days. Refunds are monitored and excessive returns by a single user are flagged and will be declined at my own discretion.&quot;,&quot;visual_price&quot;:2.79}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.dave-van-wijk.ainsworth&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.dave-van-wijk.ainsworth\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:161,&quot;name&quot;:&quot;Ainsworth&quot;,&quot;price&quot;:149,&quot;identifier&quot;:&quot;com.twickd.dave-van-wijk.ainsworth&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:798,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:38&quot;,&quot;created_at&quot;:&quot;2020-04-18T15:08:36.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:56.000000Z&quot;,&quot;business_name&quot;:&quot;Ainsworth&quot;,&quot;description&quot;:&quot;# Ainsworth \ud83e\uddd9\r\n## The Connecting Experience You Deserve\r\n\r\nDon&#039;t own Airpods, but still want the premium connecting experience? Ainsworth got you covered!\r\nAinsworth allows you to add one of the 3 popup styles to all your bluetooth devices, and wired headphones. It does this in an extremely elegant and modern way. You can also configure each popup to your hearts content. (see screenshots)\r\n\r\n### 3 Different Styles\r\n**Default**\r\nThe default popup aims to replicate the normal Airpods popup, if you like a fancy, clean popup, this is the one for you.  \r\n**Pencil**\r\nThe pencil banner is heavily inspired by the Apple Pencil banner, if you prefer minimal and cleanness over anything, this popup will suit you perfect.  \r\n**Modern**\r\nIf those ultra-clean things aren&#039;t for you, and you want all the bells and whistles, this is made just for you. This popup has 6 different actions:\r\n1. Volume Up\r\n2. Volume Down\r\n3. Play\/Pause\r\n4. Siri\r\n5. Youtube\r\n6. Phone\r\n\r\n### Configure To your Liking\r\nYou can configure each device separately, the included options are:\r\n* Enabling\/Disabling the popup\r\n* Selecting the app to open\r\n* The time that it takes to automatically dismiss the popup\r\n* Enable\/Disable the background blur of the popup\r\n* Change the image of your device (only for popup 1 and 3)\r\n\r\n### Help with Setting Up\r\n[Click here to go to the help page\r\n](https:\/\/daveapps.nl\/tweaks\/Ainsworth.html)\r\n\r\n### Bug Reports\r\n[Click here to report a bug using the github issue tracker\r\n](https:\/\/github.com\/vanwijkdave\/Ainsworth-Issues\/issues)\r\n\r\n### Compatibility\r\nThe supported iOS versions are **iOS 13.0 till 14.x**\r\nFor anything lower, check out [Tacitus](https:\/\/repo.twickd.com\/package\/com.twickd.tacitus)\r\n\r\n### Refunds\r\nRefunds are only issued after troubleshooting and the issue isn&#039;t fixed after.&quot;,&quot;visual_price&quot;:1.49}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.ethan-whited.dopeconvos&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.dopeconvos\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:242,&quot;name&quot;:&quot;DopeConvos&quot;,&quot;price&quot;:150,&quot;identifier&quot;:&quot;com.twickd.ethan-whited.dopeconvos&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:800,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2020-04-09T02:38:57.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:49.000000Z&quot;,&quot;business_name&quot;:&quot;DopeConvos&quot;,&quot;description&quot;:&quot;# DopeConvos\r\n\r\n## Endless customization for SMS Application!!\r\n\r\n### DopeConvos is only compatible with iOS 13 and iOS 14.\r\n\r\n### Current Features:\r\n* Change the Large title to anything you want.\r\n* Change the color of the Large Title.\r\n* Change overall TintColor.\r\n* Change Background Color.\r\n* Hide separators or change their color.\r\n* Change Bubble Gradient colors.\r\n* Change Bubble Text Colors.\r\n* Remove Bubble Tail.\r\n* Change sender name color.\r\n* Change preview text color.\r\n* Remove Bubble Fill.\r\n* Pin Conversations.\r\n* Gradient Background.\r\n* Background Image.\r\n* Dynamic Blurs.\r\n* Modern Pinned, DND, Mute Indicator Images.\r\n* Conversation Table corner radius and cell width\r\n* Color send buttons for SMS and iMessage\r\n* Floating Compose Button\r\n* Extended timestamps on conversations\r\n\r\n# Dependencies\r\n## which are required in order to install DopeConvos:\r\n\r\n* Cephei - `https:\/\/repo.chariz.com`\r\n\r\n* libimagepicker - `https:\/\/repo.packix.com`\r\n\r\n* libsparkcolourpicker - `https:\/\/sparkdev.me\/repo`\r\n\r\n\r\n### Please visit the FAQ page for any questions\r\n\r\n[**FAQ Page**](https:\/\/github.com\/MTACS\/DopeConvos\/blob\/master\/README.md)\r\n\r\n### Please visit the WIKI page for an explanation on what each element does in DopeConvos\r\n\r\n[**WIKI Page**](https:\/\/github.com\/MTACS\/DopeConvos\/wiki)\r\n\r\n### Issues and bug reports\r\n\r\n**When creating a new bug report or feature request, please make sure that it has not already been submitted under the &#039;Issues&#039; tab of this repository, this just helps with organization**\r\n\r\n[**Feature Request**](https:\/\/github.com\/MTACS\/DopeConvos\/issues\/new?assignees=&amp;labels=enhancement&amp;template=request-a-feature.md&amp;title=)\r\n\r\n[**Bug Report**](https:\/\/github.com\/MTACS\/DopeConvos\/issues\/new?assignees=&amp;labels=bug&amp;template=bug-report.md&amp;title=)\r\n\r\n\r\n### Follow\r\n\r\n* [**ETHN**](https:\/\/twitter.com\/ethanwhited) - follow me for more up to date info, or ask me anything.\r\n\r\n* [**MTAC**](https:\/\/twitter.com\/MTAC8) - follow MTAC and checkout his tweak Lynx\r\n\r\n* [**Email**](mailto:ethanwhited2208@gmail.com) - open to any questions or concerns.\r\n\r\n* [**Repo**](https:\/\/repo.twickd.com) - Repo containing DopeConvos&quot;,&quot;visual_price&quot;:1.5}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.daveapps.quickls&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.daveapps.quickls\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:252,&quot;name&quot;:&quot;QuickLS&quot;,&quot;price&quot;:99,&quot;identifier&quot;:&quot;com.daveapps.quickls&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:274,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2019-12-02T16:39:55.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-09T12:42:00.000000Z&quot;,&quot;business_name&quot;:&quot;Dave Van Wijk&quot;,&quot;description&quot;:&quot;## QuickLS \r\n### iOS 13-14 \r\n\r\n*Want to buy with Apple Pay, iDeal, or Credit card? [buy it here](https:\/\/daveapps.nl\/quickls)*\r\n\r\nQuickLS is a tweak which allows you to remap the current lockscreen button to any app\/shorcut of choice. If you desire, you can select multiple, and they will automaticly be placed inside a stack.  \r\n\r\n &amp;nbsp;\r\n \r\n**Full feature list:**\r\n* Remap the lockscreen button to any app\/shorcut of your choice\r\n* Choose out of 8 different shorcuts, for an even faster setup\r\n* Customize button offset\r\n* Customize the button size\r\n* Use glyphs from a custom made glyph set\r\n* Tint the buttons to a self picked color\r\n* Port the quick actions button to any non-notched device. Even iPads!\r\n\r\n&amp;nbsp;\r\n\r\n**Included Shorcuts**\r\n- Do Not Disturb\r\n- Low Power Mode\r\n- Flashlight\r\n- Airplane Mode\r\n- Mobile Data\r\n- WiFi\r\n- Bluetooth\r\n- Respring\r\n- More can be requested via email!\r\n&amp;nbsp;\r\n\r\n**Refund Policy**\r\nAll refund requests must be emailed to my support adress.\r\nIf a refund is requested within 12 hours of inital purchasing, it will be issued no questions asked.\r\nOr if a tweak-braking bug is discovered, i have 7 days to fix the bug. If i fail, you will get the option of a refund.&quot;,&quot;visual_price&quot;:0.99}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.mtac.lynx-2&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.mtac.lynx-2\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:290,&quot;name&quot;:&quot;Lynx 2&quot;,&quot;price&quot;:200,&quot;identifier&quot;:&quot;com.twickd.mtac.lynx-2&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:156,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:40&quot;,&quot;created_at&quot;:&quot;2020-12-15T00:58:44.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-06-04T11:34:09.000000Z&quot;,&quot;business_name&quot;:&quot;MTAC&quot;,&quot;description&quot;:&quot;## Lynx 2 - Ultimate Device Customization for iOS 14\r\n\r\nRequires Cephei from [Chariz](https:\/\/repo.chariz.io\/), and [libsparkcolourpicker](https:\/\/sparkdev.me\/repo) and [libSparkAppList](https:\/\/sparkdev.me\/repo)\r\n\r\nOn iOS 12 or 13? Try out [Lynx 1](https:\/\/repo.twickd.com\/package\/com.twickd.mtac.lynx)\r\n\r\nIf you cannot purchase Lynx for any reason, contact me on Twitter and we can work something out. Refunds will only be accepted for 48 hours after purchase, &#039;too many options&#039; requests will be ignored, please read entire description before purchasing.\r\n\r\n## Options\r\n\r\nLynx Settings Page\r\n\r\n* Choice between list or grid layout\r\n* Search bars for looking for specific feature\r\n\r\nSpringBoard (System Wide)\r\n\r\n* Select Dark\/Light apps\r\n* Select custom app tint (badges, navigation bars, tab bars)\r\n* Hide Bluetooth and Paste banners\r\n* Disable plugged in vibration\r\n* Lock device when facedown\r\n* Hide Dock Background\r\n* Hide Dock divider (iPadOS)\r\n* Double tap Homescreen to lock\r\n* Disable SpringBoard rotation\r\n* Hide table view separators\r\n* Use modern table view style\r\n* Hide scroll bars\r\n* Hide search bars\r\n* Hide search bar backgrounds\r\n* Hide Home Bar (globally, lockscreen &amp; homescreen)\r\n* Use custom Home Bar height &amp; width\r\n* Use small navigation bar titles\r\n* Hide navigation bar accent line\r\n* Select custom switch color\r\n* Hide system separators\r\n* Tint tab bar badges with app\r\n* Hide tab bar labels\r\n* Use haptic feedback on tab bar buttons\r\n* Hide Homescreen page dots\r\n* Hide screenshot preview\r\n* Disable screenshot sound\r\n* Hide open folder background\r\n* Hide open folder title\r\n* Hide folder icon background view\r\n* Set custom number of dock icons, folder rows and columns\r\n* Enable Drag &amp; Drop\r\n* Auto expand notification banners\r\n* Tint UISwitch knob\r\n\r\nLockscreen\r\n\r\n* Enable MagSafe animation\r\n* Hide clock label\r\n* Hide clock subtitle\r\n* Custom clock alpha\r\n* Custom clock subtitle alpha\r\n* Set custom clock font weight\r\n* Set custom clock font size\r\n* Set custom clock font\r\n* Hide Control Center grabber\r\n* Hide battery view\r\n* Always use Do Not Disturb dark style\r\n* Hide Press to &#039;Unlock\/Swipe up to Unlock&#039; text\r\n* Use custom &#039;Press to Unlock\/Swipe up to Unlock&#039; text\r\n* Show Press to &#039;Unlock\/Swipe up to Unlock&#039; text immmediately\r\n* Hide Page Dots\r\n* Hide Do Not Disturb banner\r\n* Pull to clear notifications\r\n* Use Modern notification icons\r\n* Hide notification swipe separators\r\n* Hide passcode cancel button\r\n* Hide passcode emergency button\r\n* Hide passcode backspace button\r\n* Hide &#039;Enter Passcode&#039; text\r\n* Use custom &#039;Enter Passcode&#039; text\r\n* Use passcode button haptic feedback\r\n* Hide both or individual Lockscreen quick action buttons\r\n* Hide Lockscreen quick action button background blur\r\n* Show number of notifications in app group\r\n* Hide &#039;No Older Notifications&#039;\r\n* Use border shadows on notifications and banners\r\n* Disable unlock animation\r\n\r\nApp Library\r\n\r\n* Disable App Library on iPhone\r\n* Open in list mode by default\r\n* Hide Pod background blur\r\n* Hide Pod category name\r\n* Hide folder app labels\r\n* Hide folder titles\r\n* Hide search bar blur\r\n* Hide magnifying glass icon\r\n* Haptic feedback on open\r\n* Haptic feedback on close\r\n* Delete apps in List mode\r\n\r\nStatus Bar\r\n\r\n* Use iPad style on iPhone\r\n* Hide iPad style date\r\n* Hide Camera and Microphone usage dot\r\n* Hide breadcrumbs\r\n* Hide globally\r\n* Hide on Lockscreen\r\n* Hide on Homescreen\r\n* Hide battery\r\n* Hide battery bolt\r\n* Hide battery percentage string\r\n* Show battery percentage inside icon\r\n* Hide Wi-Fi signal\r\n* Hide cell signal\r\n* Hide clock\r\n* Hide carrier text\r\n* Hide location arrow\r\n* Hide rotation lock\r\n* Hide Do No Disturb moon\r\n* Hide Bluetooth icon\r\n* Hide Alarm bell\r\n* Hide Airplane mode\r\n* Hide VPN icon\r\n* Hide CarPlay icon\r\n* Hide &#039;Not Charging&#039; text\r\n* Hide lock icon (non notched devices)\r\n* Hide screen recording colored pill\/bar\r\n* Hide screen recording pill\/bar\r\n* Use Wi-Fi address as carrier text\r\n* Use custom carrier text\r\n* Use current date as carrier, and set custom format\r\n* Use custom time format\r\n\r\nIcons\r\n\r\n* Hide 3D Touch remove stack\r\n* Hide 3D Touch configure widget\r\n* Hide 3D Touch configure stack\r\n* Hide 3D Touch edit homescreen\r\n* Hide 3D Touch share app\r\n* Hide 3D Touch delete app\r\n* Hide 3D Touch pause download\r\n* Hide 3D Touch cancel download\r\n* Hide 3D Touch prioritize download\r\n* Hide 3D Touch separators\r\n* Hide 3D Touch images\r\n* Show Wi-Fi address on settings platter\r\n* Show battery percentage on settings platter\r\n* Add &#039;Clear Badges&#039; option\r\n* Add &#039;Rename App&#039; option\r\n* Hide icon labels\r\n* Use custom icon label color\r\n* Hide recently updated dots\r\n* Hide beta app dots\r\n* Use average icon badge color\r\n* Hide icon badges\r\n* Hide icon badge text\r\n* Show download percentage\r\n* Hide apps on SpringBoard\r\n\r\nApp Switcher\r\n\r\n* Use grid style (iPhone)\r\n* Use page style (iPad)\r\n* Hide app suggestion banner\r\n* Hide app icons\r\n* Hide app name labels\r\n* 3D Touch or swipe down to kill all running apps\r\n* Use kill all apps confirmation\r\n* Prevent killing of now playing apps\r\n* Disable side 3D touch gesture\r\n\r\nWidgets\r\n\r\n* Hide labels on Homescreen\r\n* Hide stack side scroll dots\r\n* Tap on battery widget for Low Power Mode\r\n* Hide battery widget empty rings\r\n* Hide battery widget separator lines (4x4)\r\n* Hide Siri widget separator lines (4x4)\r\n* Hide view on Homescreen\r\n* Hide view on Lockscreen\r\n* Use border shadow with custom color and intensity\r\n\r\nControl Center\r\n\r\n* Disable Control Center\r\n* Actually disable Wi-Fi &amp; Bluetooth\r\n* Hide Camera and Microphone usage label\r\n* Use rounded modules\r\n* Show volume and brightness slider percentages\r\n* Hide top chevron\r\n* Fit blurred view to CC view (iPadOS and non notched devices)\r\n* Use border shadow with custom color and intensity on modules and background view \r\n* \r\n\r\nSettings\r\n\r\n* Use custom first name\r\n* Use custom last name\r\n* Hide cell icons\r\n* Use rounded cell icons\r\n* Hide chevrons\r\n* Hide 3rd Party Apps\r\n* Hide COVID-19 exposure notifications\r\n* Show local Wi-Fi address\r\n* Show &amp; copy UUID in About section\r\n\r\nMusic\r\n\r\n* Hide &#039;Up Next&#039; &amp; &#039;Queue&#039; popups\r\n* Show all recently added songs in Library\r\n* Use 3 column recently added list (iPhone)\r\n\r\nPhotos\r\n\r\n* Skip photo deletion\r\n* Show image size in title\r\n* Use infinite zoom\r\n\r\nAppStore\r\n\r\n* Replace Arcade tab with updates button\r\n\r\nPhone\r\n\r\n* Hide dialer button background\r\n* Show exact call time\r\n* Change date format of calls\r\n* Hide 3rd party app calls\r\n* Hide voicemail tab\r\n* Hide call button background\r\n* Use custom call button background\r\n\r\nMessages\r\n\r\n* Hide pinned conversation glow\r\n* Hide separators in conversation list\r\n* Use custom pinned bubble background color\r\n* Use custom pinned bubble label text color\r\n\r\nCamera\r\n\r\n* Use iPad style layout\r\n* Hide recent picture preview\r\n* Disable shutter sound\r\n* Double tap to flip\r\n\r\nExperimental features\r\n\r\n* Use notched status bar on non native device\r\n* Use flat Safari search bar\r\n* Set custom screen corner radius\r\n* Use custom icon scale\r\n* Use iPhone X style UI&quot;,&quot;visual_price&quot;:2}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.nicho1asdev.bigsurcenter&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/banner.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/banner.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/icon.jpeg?size=default&quot;,&quot;medium&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/icon.jpeg?size=medium&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.nicho1asdev.bigsurcenter\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:515,&quot;name&quot;:&quot;BigSurCenter&quot;,&quot;price&quot;:199,&quot;identifier&quot;:&quot;com.twickd.nicho1asdev.bigsurcenter&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:1,&quot;business_id&quot;:172,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:42&quot;,&quot;created_at&quot;:&quot;2021-03-27T15:26:39.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-06-06T19:17:13.000000Z&quot;,&quot;business_name&quot;:&quot;nicho1asdev&quot;,&quot;description&quot;:&quot;# BigSurCenter - A fresh, new and lightweight control center\r\n**Developed by nicho1asdev, designed by Futur3Sn0w. BigSurCenter replaces the default iOS control center with a new lightweight and elegant one inspired by the new control center in MacOS Big Sur. Compatible with iOS 13 and 14.**\r\n\r\n**Compatibility**\r\n* Compatible with iOS 13 and 14.\r\n* Fully compatible with both iPhones and iPads.\r\n* Compatible with custom control center module tweaks.\r\n\r\n**Features**\r\n* Choose your favorite modules in the top right module.\r\n* Arrage slider modules.\r\n* Bottom presentation gestures for notched devices.\r\n* Ability to change the presentation speed to your liking.\r\n\r\n**Customization**\r\n* Change the colors for the sliders, slider backgrounds, module backgrounds and selected modules.\r\n* Hide some elements.\r\n* Adjust the corner radius for the background or modules.\r\n\r\n**Support**\r\n\r\nIf you have any feature requests or find a bug, or would like to follow me and get updates on new projects that I&#039;m working on, follow me on Twitter [@itsnicho1as](http:\/\/twitter.com\/itsnicho1as). My DMs on there are open. I try to open and respond to everyone and take bug reports seriously!\r\n\r\nIf you&#039;d like to support my work further, you can pledge to me on [Patreon](http:\/\/patreon.com\/nicho1asdev), or donate to my [Paypal](https:\/\/paypal.me\/nicho1asdev).&quot;,&quot;visual_price&quot;:1.99}}]"></repository-index-featured>
+
+</div>
+
+
+<div class="container mx-auto px-6 xl:px-0 py-32 md:py-48">
+    <div class="text-center space-y-6 mb-24 lg:mb-32">
+        <h2 class="text-twickd-gradient text-5xl sm:text-6xl font-bold">Explore</h2>
+        <p class="text-lg max-w-4xl mx-auto">
+            You are unique, so should be your devices! With more than <span class="font-semibold">500 packages</span> Twickd allow you to release your inner creativity and add powerful features and customization options to your devices
+        </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                <div class="bg-gradient-to-tr from-twickd-900 to-gray-900 rounded-xl overflow-hidden">
+            <div>
+                <lazy-image
+                        class="w-full rounded-2xl shadow-2xl pb-9/16 -ml-8 md:-ml-16 -mt-4 md:-mt-8"
+                        v-lazyload
+                        src="https://twickd.com/images/com.twickd.ethan-whited.catalina/banner.jpeg?size=default"
+                        placeholder="https://twickd.com/images/com.twickd.ethan-whited.catalina/banner.jpeg?size=mini"
+                    />
+            </div>
+            <div class="p-8 md:p-16 text-white space-y-4">
+                <p class="text-2xl font-semibold w-48">Make your device unique</p>
+                <p class="text-red-200">Unleash your creative potential and make your device look unique and feel the way you want it with our selection of the best themes</p>
+                <a href="https://repo.twickd.com/get/com.twickd.ethan-whited.catalina"
+                        class="text-white inline-flex items-center font-semibold group button icon to-right p-0">
+                    <span class="mr-2">View Catalina</span>
+                    <svg class="s-6 transform group-hover:translate-x-1 transition-transform duration-200"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+                        <div class="bg-gray-100 dark:bg-gray-900 dark:bg-opacity-50 rounded-xl overflow-hidden">
+            <div class="p-8 md:p-16 dark:text-white space-y-4">
+                <p class="text-2xl font-semibold w-56">Go beyond the boundaries</p>
+                <p class="opacity-50">Your device has unexploited super powers, so do you!<br/>Our selection of tweaks will help you get complete access to your device full potential</p>
+                <a href="https://repo.twickd.com/get/com.twickd.john-sklikas.3dbadgeclear"
+                        class="text-twickd-500 hover:text-twickd-600 inline-flex items-center font-semibold group button icon to-right p-0">
+                    <span class="mr-2">View 3DBadgeClear</span>
+                    <svg class="s-6 transform group-hover:translate-x-1 transition-transform duration-200"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <lazy-image
+                        class="w-full rounded-2xl shadow-2xl pb-9/16 ml-8 md:ml-16 -mb-4 md:-mb-8"
+                        v-lazyload
+                        src="https://twickd.com/images/com.twickd.john-sklikas.3dbadgeclear/banner.jpeg?size=default"
+                        placeholder="https://twickd.com/images/com.twickd.john-sklikas.3dbadgeclear/banner.jpeg?size=mini"
+                    />
+            </div>
+        </div>
+            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 pt-48">
+        <p class="max-w-lg text-lg self-center">
+            <span class="font-semibold">Add the repository to your favorite package manager</span> and start to experience freedom to a whole new level
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="cydia://url/https://repo.twickd.com"
+                class="button px-4 py-2 bg-orange-800 bg-opacity-15 text-orange-800 hover:text-white hover:bg-opacity-100">
+                Cydia
+            </a>
+            <a href="installer://add/repo=https://repo.twickd.com"
+                class="button px-4 py-2 bg-blue-500 bg-opacity-15 text-blue-500 hover:bg-opacity-100 hover:text-white">
+                Installer
+                </a>
+            <a href="zbra://sources/add/https://repo.twickd.com"
+                class="button px-4 py-2 bg-gray-900 dark:bg-gray-700 dark:bg-opacity-15 bg-opacity-15 hover:bg-opacity-100 hover:text-white">
+                Zebra
+            </a>
+            <a href="sileo://source/https://repo.twickd.com"
+                class="button px-4 py-2 bg-teal-500 bg-opacity-15 text-teal-500 hover:bg-opacity-100 hover:text-white">
+                Sileo
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-900 py-32">
+    <div class="container mx-auto px-8 xl:px-0 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col">
+            <h2 class="text-white text-4xl lg:text-5xl mb-4">Share your work!</h2>
+            <p class="text-gray-500">Join our community of talented artists and developers and
+                showcase your work in from of millions of enthusiasts</p>
         </div>
 
-      </div>
+        <div class="flex items-center justify-center md:justify-end">
+            <a href="https://twickd.com/login"
+               class="button icon to-right bg-twickd-gradient shadow-twickd text-white text-lg space-x-2">
+                <span>Get started now</span>
+                <svg fill="none"
+                     class="s-6"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
     </div>
-    <div class="packageList">
-      <div class="row">
+</div>
 
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollazyt.subwaysurfers_2.20.1_iphoneos-arm/SubwaySurfers.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
+<div class="py-32 lg:py-48 bg-gray-100 dark:bg-gray-900 dark:bg-opacity-50 overflow-hidden">
+    <repository-index-tweaks :pkgs="[{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.john-sklikas.3dbadgeclear&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.john-sklikas.3dbadgeclear\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.john-sklikas.3dbadgeclear\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.john-sklikas.3dbadgeclear\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.john-sklikas.3dbadgeclear\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:207,&quot;name&quot;:&quot;3DBadgeClear&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.john-sklikas.3dbadgeclear&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:715,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2019-12-01T22:59:06.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:55.000000Z&quot;,&quot;downloads_count&quot;:&quot;34841&quot;,&quot;business_name&quot;:&quot;John Sklikas&quot;,&quot;visual_price&quot;:0}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.quix.noclutter&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.quix.noclutter\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.quix.noclutter\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.quix.noclutter\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.quix.noclutter\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:270,&quot;name&quot;:&quot;NoClutter&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.quix.noclutter&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:416,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2020-05-22T22:11:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:52.000000Z&quot;,&quot;downloads_count&quot;:&quot;29122&quot;,&quot;business_name&quot;:&quot;Quix&quot;,&quot;visual_price&quot;:0}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.zeph.toneenabler13&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.zeph.toneenabler13\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.zeph.toneenabler13\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.zeph.toneenabler13\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.zeph.toneenabler13\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:215,&quot;name&quot;:&quot;ToneEnabler13&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.zeph.toneenabler13&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:653,&quot;section_id&quot;:1,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2020-08-10T10:33:59.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:56.000000Z&quot;,&quot;downloads_count&quot;:&quot;25389&quot;,&quot;business_name&quot;:&quot;Zeph&quot;,&quot;visual_price&quot;:0}}]"></repository-index-tweaks>    
+</div>
+<div class="py-32 lg:py-48 overflow-hidden">
+    <repository-index-themes :pkgs="[{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.ethan-whited.catalina&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.catalina\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.catalina\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.catalina\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.ethan-whited.catalina\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:503,&quot;name&quot;:&quot;Catalina&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.ethan-whited.catalina&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:346,&quot;section_id&quot;:2,&quot;released_at&quot;:&quot;2021-05-05 14:09:42&quot;,&quot;created_at&quot;:&quot;2020-02-08T01:18:57.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:51.000000Z&quot;,&quot;downloads_count&quot;:&quot;23578&quot;,&quot;business_name&quot;:&quot;Ethan Whited&quot;,&quot;visual_price&quot;:0}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.aiirik.aiir-status-bar&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.aiirik.aiir-status-bar\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.aiirik.aiir-status-bar\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.aiirik.aiir-status-bar\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.aiirik.aiir-status-bar\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:125,&quot;name&quot;:&quot;Aiir Status Bar&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.aiirik.aiir-status-bar&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:375,&quot;section_id&quot;:2,&quot;released_at&quot;:&quot;2021-05-05 14:09:38&quot;,&quot;created_at&quot;:&quot;2020-02-26T01:25:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:54.000000Z&quot;,&quot;downloads_count&quot;:&quot;16138&quot;,&quot;business_name&quot;:&quot;Aiirik&quot;,&quot;visual_price&quot;:0}},{&quot;url&quot;:&quot;https:\/\/repo.twickd.com\/get\/com.twickd.j3nra1n.lotus-revised&quot;,&quot;banner&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.j3nra1n.lotus-revised\/banner.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.j3nra1n.lotus-revised\/banner.jpeg?size=mini&quot;},&quot;icon&quot;:{&quot;default&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.j3nra1n.lotus-revised\/icon.jpeg?size=default&quot;,&quot;mini&quot;:&quot;https:\/\/twickd.com\/images\/com.twickd.j3nra1n.lotus-revised\/icon.jpeg?size=mini&quot;},&quot;package&quot;:{&quot;id&quot;:211,&quot;name&quot;:&quot;Lotus Revised&quot;,&quot;price&quot;:0,&quot;identifier&quot;:&quot;com.twickd.j3nra1n.lotus-revised&quot;,&quot;status&quot;:1,&quot;env&quot;:&quot;production&quot;,&quot;featured&quot;:0,&quot;business_id&quot;:22,&quot;section_id&quot;:2,&quot;released_at&quot;:&quot;2021-05-05 14:09:39&quot;,&quot;created_at&quot;:&quot;2020-07-16T01:55:22.000000Z&quot;,&quot;updated_at&quot;:&quot;2021-05-05T14:09:53.000000Z&quot;,&quot;downloads_count&quot;:&quot;14703&quot;,&quot;business_name&quot;:&quot;J3nRa1n&quot;,&quot;visual_price&quot;:0}}]"></repository-index-themes>    
+</div>
 
-                    <img class="img-fluid" src="assets/SubwaySurfersBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Subway Surfers Mod Menu</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Mod Menu</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 2.20.1</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<section id="contact" class="container mx-auto px-6 xl:px-0 pb-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x dark:divide-gray-700">
+        <div class="flex items-center justify-center">
+            <a href="https://twickd.com/twitter" class="max-w-md p-8 flex flex-col items-center justify-center text-center space-y-2 group">
+                <svg class="s-12 group-hover:text-socials-twitter transition-colors" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                <p class="font-semibold text-xl">Connect with us</p>
+                <p>
+                    We want to be connected with our users. Follow <span class="font-semibold dark:text-white">@twickdrepo</span> to get the latest updates.
+                </p>
             </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollaz.modernops_5.86_iphoneos-arm/ModernOps.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/ModernOpsBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Modern Ops Mod Menu</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Mod Menu</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 5.86</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="https://twickd.com/discord" class="max-w-md p-8 flex flex-col items-center justify-center text-center space-y-2 group">
+                <svg class="s-12 group-hover:text-socials-discord transition-colors" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4a8.18 8.18 0 001.8.536c.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg>
+                <p class="font-semibold text-xl">Be part of the adventure</p>
+                <p>
+                    Chat with us directly on Discord. Submit your ideas and connect with other users of Twickd.
+                </p>
             </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollaz.csr2_2.18.2_iphoneos-arm/CSR2.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/CSR2Banner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">CSR2 Racing Mod Menu</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Mod Menu</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 2.18.2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollaz.blockcitywars_7.2.2_iphoneos-arm/BCW.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/BCWBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Block City Wars Mod Menu</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Mod Menu</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 7.2.2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.gamegod.igg_0.1.1_iphoneos-arm/iGameGod.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/IGGBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">iGameGod</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> iGameGod</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5"p aria-hidden="true"></i> Tool</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 0.1.1</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.level3tjg.bfdecrypt_1.3.3-1_iphoneos-arm/BFD.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/BFDBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">BFDecrypt</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> level3tjg</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tool</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.3.3-1</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.twickd.j3nra1n.lotus-revised_1.1.1_iphoneos-arm/Lotus.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/LotusBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Lotus Revised</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> J3nRa1n</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Theme</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.1.1  </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.hackyouriphone.snowboard_1.3.0~Beta3_iphoneos-arm/Snow.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/SnowBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">SnowBoard</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> Sparkdev</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tweak</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.1.2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.bousrih.viola_1.9.7_iphoneos-arm/Viola.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/ViolaBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Viola</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> bossgfx</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Theme</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.9.7</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/web/io.github.worksbybbs.greendotssettings.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/io.github.worksbybbs.greendotssettings/banner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Cylinder Reborn</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> Ryan Nair</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tweak</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.0.4</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/web/io.github.worksbybbs.whitedotssettings.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/io.github.worksbybbs.whitedotssettings/banner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Flow</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> Muirey03</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tweak</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 1.2.2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollaz.spotult_8.5.65_iphoneos-arm/SpotUlt.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/SpotUltBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">SptUlt++</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tweak</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 8.5.65</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.dollaz.kinemaster_4.13.3_iphoneos-arm/Kinemaster.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/KinemasterBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Kinemaster++</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> DollazYT</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tweak</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 4.13.3</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 col-12 packageListItem">
-            <a class="subtle_link" href="depiction/com.hackyouriphone.libertybeta_0.2.12_iphoneos-arm/liberty.html">
-              <div class="package-card">
-                <div class="row">
-                  <div class="col">
-
-                    <img class="img-fluid" src="assets/LibertyBanner.png">
-
-                    <div class="package-card-title">
-                      <p class="title">Liberty Lite (beta)</p>
-                      <p class="developer"><i class="fas fa-user" style="color:#d5d5d5" aria-hidden="true"></i> HackYourIphone</p>
-                      <p class="developer"><i class="fas fa-stream" style="color:#d5d5d5" aria-hidden="true"></i> Tool</p>
-                      <p class="developer"><i class="fas fa-code-branch" style="color:#d5d5d5" aria-hidden="true"></i> 0.2.12</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
--->
-          
-
-          
-    <div class="caption center footer" style="font-size:12px;text-align: center">2021 © MODZ TEAM ALL RIGHTS RESERVED</div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <script>
-    function filterPkg() {
-      var selectedOption = $('#pkgSelect').val();
-
-      if(selectedOption == "all"){
-        $('.package-card').parent().parent().fadeOut(0);
-        $('.package-card').parent().parent().fadeIn('fast');
-      } else {
-        var divContains = $('div.packageListItem').find("p:contains("+selectedOption+")").parent().parent().parent().parent().parent().parent();
-        //console.log(divContains);
-        var divNotContains = $(divContains).parent().children().not(divContains);
-        //console.log(divNotContains);
-
-        $(divNotContains).fadeOut(0);
-        $(divContains).fadeOut(0);
-        $(divContains).fadeIn('fast');
-
-
-      }
-
-
-    }
-  </script>
-
-
-<script src="web/index.js"></script>
-
-
-</body></html>
+        </div>
+    </div>
+</section>
+        </div>
+        <cookie-notice>
+        </cookie-notice>
+        <div id="footer"
+     class="bg-gray-900">
+    <div class="container mx-auto flex justify-center flex-wrap py-16 px-4 text-gray-500">
+        <div class="w-full max-w-6xl grid grid-rows-4 md:grid-rows-1 md:grid-cols-4 main">
+            <ul class="group">
+                <li class="title tracking-wider group-hover:text-gray-400">Products</li>
+                <li><a href="https://twickd.com/account">Account</a></li>
+                <li><a href="https://repo.twickd.com">Repository</a></li>
+                <li><a href="https://dashboard.twickd.com">Dashboard</a></li>
+            </ul>
+            <ul class="group">
+                <li class="title tracking-wider group-hover:text-gray-400">Resources</li>
+                <li><a href="https://twickd.com/merchant">Become a creator <span class="text-xs px-1 py-px rounded-sm bg-gray-800 text-gray-600 tracking-wider font-medium uppercase">beta</span></a>
+                </li>
+                <li><a href="https://docs.twickd.com/">Documentation</a></li>
+                <li><a href="https://github.com/twickd">Open source</a></li>
+                <li><a href="https://docs.twickd.com/guides">Guides</a></li>
+                <li><a href="https://docs.twickd.com/support">Support</a></li>
+                <li><a href="https://docs.twickd.com/changelog">Updates</a></li>
+            </ul>
+            <ul class="group">
+                <li class="title tracking-wider group-hover:text-gray-400">Company</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            <ul class="group">
+                <li class="title tracking-wider group-hover:text-gray-400">Legal</li>
+                <li><a href="https://twitter.com/TwickdRepo">Contact</a></li>
+                <li><a href="https://docs.twickd.com/legals/terms">Terms of service</a>
+                </li>
+                <li><a href="https://docs.twickd.com/legals/privacy">Privacy policy</a>
+                </li>
+                <li><a href="https://docs.twickd.com/creators/creative-guidelines">Creative guidelines</a></li>
+            </ul>
+        </div>
+        <div class="w-full lg:block border-t border-gray-800 lg:border-none pt-8 mt-8 lg:mt-0">
+            <div class="flex space-x-2 items-center mb-4 text-white">
+                <svg class="s-8"
+                     fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 86 86">
+                    <path d="M12.64 2.228a6 6 0 018.486 0L83.508 64.61a6 6 0 010 8.486L73.096 83.508a6 6 0 01-8.486 0L2.228 21.126a6 6 0 010-8.486L12.64 2.228z" />
+                    <path d="M53.744 42.405a6 6 0 010 8.485L21.126 83.508a6 6 0 01-8.486 0L2.228 73.096a6 6 0 010-8.486l32.618-32.618a6 6 0 018.485 0l10.413 10.413zM78.302 26.332c-5.219 5.219-13.68 5.219-18.898 0-5.219-5.219-5.219-13.68 0-18.898 5.218-5.219 13.68-5.219 18.898 0s5.218 13.68 0 18.898z" />
+                </svg>
+                <p class="font-bold text-2xl leading-none">Twickd</p>
+            </div>
+            <p class="text-sm">Copyright &copy; 2019 - 2021 <span class="text-gray-500 hover:text-gray-400">Ventura
+                    Global, Inc.</span> All rights reserved</p>
+        </div>
+    </div>
+</div>    </div>
+</body>
