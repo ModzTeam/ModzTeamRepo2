@@ -8,86 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css" href="https://modzteam.github.io/ModzTeamRepo/web/index.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
    </head>
    <style>
-   $green: #1ECD97;
-$gray: #bbbbbb;
-* {
-  font-family: 'Roboto', sans-serif;
-}
-.container1 {
-  position: absolute;
-  top:50%;
-  left:50%;
-  margin-left: -65px;
-  margin-top: -20px;
-  width: 130px;
-  height: 40px;
-  text-align: center;
-}
-button1 {
-  outline:none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius:40px;
-  background: #fff;
-  border: 2px solid $green;
-  color:$green;
-  letter-spacing:1px;
-  text-shadow:0;
-  font:{
-    size:12px;
-    weight:bold;
-  }
-  cursor: pointer;
-  transition: all 0.25s ease;
-  &:hover {
-    color:white;
-    background: $green;
-  }
-  &:active {
-    //letter-spacing: 2px;
-    letter-spacing: 2px ;
-  }
-  &:after {
-    content:"SUBMIT";
-  }
-}
-.onclic {
-  width: 40px;
-  border-color:$gray;
-  border-width:3px;
-  font-size:0;
-  border-left-color:$green;
-  animation: rotating 2s 0.25s linear infinite;
-
-  &:after {
-    content:"";
-  }
-  &:hover {
-    color:$green;
-    background: white;
-  }
-}
-.validate {
-  font-size:13px;
-  color: white;
-  background: $green;
-  &:after {
-    font-family:'FontAwesome';
-    content:"\f00c";
-  }
+   .button {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(145, 92, 182);
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
 
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
- }
+.glow-button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
 </style>
 <body>
   <nav>
@@ -128,14 +66,52 @@ button1 {
      <h1 style="font-family:Modish; font-size:35px; color: white">M O D Z &nbsp; T E A M &nbsp; R E P O</h1><br><br>
      
       <div class="col-md-3 col-6 text-center">
-        <a class="pkg-button sileo" style="border-color:white;color:black;background: white; opacity:60%" href="sileo://source/https://modzteam.github.io/ModzTeamRepo2/">Sileo</a>
+        <a class="pkg-button cydia" style="
+        border-color:transparent;
+        color:rgba(20,184,166,1.0);
+        background:rgba(20,184,166,0.25);float: right; width: 145px;height:40px;font-size:15px; text-align: center" href="sileo://source/https://modzteam.github.io/ModzTeamRepo2/"><b>Sileo</b></a>
       </div>
       <div class="col-md-3 col-6 text-center">
-        <a class="pkg-button cydia" style="border-color:white;color:black;background: white; opacity:60%" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://modzteam.github.io/ModzTeamRepo2/">Cydia</a>
-     </div><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a class="pkg-button cydia" style="
+        border-color:transparent;
+        color:rgba(154,52,18,1.0);
+        background: rgba(154,52,18,0.25);
+        float: left; 
+        width: 145px;
+        margin-top:-30px;
+        height:40px;
+        font-size:15px; 
+        text-align: center " href="cydia://url/https://cydia.saurik.com/api/share#?source=https://modzteam.github.io/ModzTeamRepo2/"><b>Cydia</b></a>
+     </div>
+      <div class="col-md-3 col-6 text-center">
+        <a class="pkg-button cydia" style="
+        border-color:transparent;
+        color: rgba(255,255,255,1.0);
+        background: rgba(51,65,85,0.5);
+        float: right; 
+        width: 145px;
+        height:40px;
+        font-size:15px; 
+        text-align: center" href="zbra://sources/add/https://modzteam.github.io/ModzTeamRepo2/"><b>Zebra<b></a>
+      </div>
+      <div class="col-md-3 col-6 text-center">
+        <a class="pkg-button cydia" style="
+        border-color:transparent;
+        background: rgba(59,130,246,0.25);
+        color:rgba(59,130,246,1.0);
+        float: left; width: 145px;
+        margin-top:-29px;
+        height:40px; 
+        font-size:15px; 
+        text-align: center" href="installer://add/https://modzteam.github.io/ModzTeamRepo2/"><b>Installer</b></a>
+     </div>
+     
+        
+     </a><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
    
   </section>
+ 
 <script>
    $(function() {
   $( "#button1" ).click(function() {
