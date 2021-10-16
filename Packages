@@ -1,5 +1,5 @@
-Package: com.dollaz.kissthagamegoodbyeskyline
-Name: ModMenuX - KissThaGameGoodbye - Skyline
+Package: com.dollaz.kissthagamegoodbye
+Name: ModMenuX - KissThaGameGoodbye
 Depends: mobilesubstrate
 Version: 7.2.2
 Architecture: iphoneos-arm
@@ -9,51 +9,12 @@ Author: DollazYT
 Section: Mod Menu
 Homepage: youtube.com
 Size: 202618
-MD5: 2b893fee0716124c0c18ce0a1b13c512
-SHA1: 844b4bdbd65cd7486788c2a77d0423ffed74bab4
-SHA256: 521c68a0f420ce0a034f8bdb770619dd91c79a8fa7c238db646f18cfe920d8cc
+MD5: db4ee25d8dc26f9de7cdf8c50562fa22
+SHA1: 236fa432b16cd4dfae57ed4574fee41dc8d6d86e
+SHA256: b4218ff5af352764a4786bc71db23508ea053f8a71c03ebefb0ff149022dd346
 Icon: https://modzteam.github.io/ModzTeamRepo2/assets/icon/Dollaz.png
-Filename: https://modzteam.github.io/ModzTeamRepo2/debs/com.dollaz.kissthagamegoodbyeskyline_7.2.2_iphoneos-arm.deb
-Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.dollaz.kissthagamegoodbyeskyline_7.2.2_iphoneos-arm/SX.html
+Filename: https://modzteam.github.io/ModzTeamRepo2/debs/com.dollaz.kissthagamegoodbye_7.2.2_iphoneos-arm.deb
+Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.dollaz.kissthagamegoodbye_7.2.2_iphoneos-arm/SX.html
 SileoDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/SX.json
 ModernDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/SX.json
 
-Package: com.dollaz.kissthagamegoodbyefire
-Name: ModMenuX - KissThaGameGoodbye - Fire
-Depends: mobilesubstrate
-Version: 7.2.2
-Architecture: iphoneos-arm
-Description: ModzTeam Mod Menu
-Maintainer: DollazYT
-Author: DollazYT
-Section: Mod Menu
-Homepage: youtube.com
-Size: 202536
-MD5: da80e4046c62be63f24a73afc9fba751
-SHA1: ac48aa7bc6e8516a5acb537d875bbbfc16344a3c
-SHA256: 0c0579dd0452402daed66487d65032f391351cb3904c3000fe7068184eef6600
-Icon: https://modzteam.github.io/ModzTeamRepo2/assets/icon/DollazR.png
-Filename: https://modzteam.github.io/ModzTeamRepo2/debs/com.dollaz.kissthagamegoodbyefire_7.2.2_iphoneos-arm.deb
-Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.dollaz.kissthagamegoodbyefire_7.2.2_iphoneos-arm/FX.html
-SileoDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/FX.json
-ModernDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/FX.json
-
-Package: com.dollaz.kissthagamegoodbyeice
-Name: ModMenuX - KissThaGameGoodbye - Ice
-Depends: mobilesubstrate
-Version: 7.2.2
-Architecture: iphoneos-arm
-Description: ModzTeam Mod Menu
-Maintainer: DollazYT
-Author: DollazYT
-Section: Mod Menu
-Homepage: youtube.com
-Size: 201946
-MD5: ee836436ce6ef3c89ad6cb19df842928
-SHA1: cea4c65c2c00f8eb207ba457c554037c937e213e
-SHA256: afc3fcf6d6187a9467049ed257461b698f0f57de9328337109f97999576c1b2d
-Icon: https://modzteam.github.io/ModzTeamRepo2/assets/icon/DollazB.png
-Filename: https://modzteam.github.io/ModzTeamRepo2/debs/com.dollaz.kissthagamegoodbyeice_7.2.2_iphoneos-arm.deb
-Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.dollaz.kissthagamegoodbyeice_7.2.2_iphoneos-arm/IX.html
-SileoDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/IX.json
-ModernDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/IX.json
