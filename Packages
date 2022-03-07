@@ -18,3 +18,22 @@ Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.dollaz.kisstha
 SileoDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/SX.json
 ModernDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/SX.json
 
+Package: com.modzteam.csrmmx
+Name: ModMenuX - CSR2
+Depends: mobilesubstrate
+Version: 3.7.0
+Architecture: iphoneos-arm
+Description: CSR2 ModzTeam Mod Menu
+Maintainer: ModzTeam
+Author: DollazYT
+Section: Mod Menu
+Homepage: youtube.com
+Size: 94722
+MD5: eea6fdbe8197a385b4fea1e924beede0
+SHA1: f16b3d53726b71c1eea785d1ab9c6b377cfe2bcc
+SHA256: 6c5fde165d9da4426b8c2e015ba4bd3ddc25e699254bef675b4257dcb661a511
+Icon: https://www.google.com/url?sa=i&url=https%3A%2F%2Fjamesmcn.com%2F2020%2F12%2F18%2Fcsr-racing-2%2F&psig=AOvVaw0tj-GlERRiaJSPrqrqQCRL&ust=1646717987705000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCJCzgNiks_YCFQAAAAAdAAAAABAT
+Filename: https://modzteam.github.io/ModzTeamRepo2/debs/com.modzteam.csrmmx_3.7.0_iphoneos-arm.deb
+Depiction: https://modzteam.github.io/ModzTeamRepo2/depiction/com.modzteam.csrmmx_3.7.0_iphoneos-arm/csr.html
+SileoDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/csr.json
+ModernDepiction: https://modzteam.github.io/ModzTeamRepo2/depiction/json/csr.json
